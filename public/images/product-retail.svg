@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="675" viewBox="0 0 900 675" role="img" aria-labelledby="title">
+  <title id="title">Retail window campaign kit placeholder</title>
+  <rect width="900" height="675" fill="#070707"/>
+  <path d="M126 120h648v432H126z" fill="#151515" stroke="#fff" stroke-opacity="0.12"/>
+  <path d="M176 178h250v316H176zM474 178h250v316H474z" fill="#090909" stroke="#fff" stroke-opacity="0.1"/>
+  <path d="M214 242h174M214 292h118M512 242h174M512 292h118" stroke="#D4AF37" stroke-width="14" stroke-linecap="round"/>
+  <path d="M214 390h170M512 390h170" stroke="#fff" stroke-opacity="0.18" stroke-width="38" stroke-linecap="round"/>
+</svg>

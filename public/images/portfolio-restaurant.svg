@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100" role="img" aria-labelledby="title">
+  <title id="title">Restaurant facade before and after placeholder</title>
+  <rect width="900" height="1100" fill="#080808"/>
+  <path d="M80 162h740v646H80z" fill="#151515" stroke="#fff" stroke-opacity="0.1"/>
+  <path d="M134 236h632v102H134z" fill="#050505" stroke="#D4AF37" stroke-opacity="0.4"/>
+  <text x="450" y="306" text-anchor="middle" fill="#F3D978" font-family="Arial" font-size="56" font-weight="900" letter-spacing="4">MAISON</text>
+  <path d="M150 422h252v290H150zM498 422h252v290H498z" fill="#090909" stroke="#fff" stroke-opacity="0.08"/>
+  <path d="M188 512h176M536 512h176" stroke="#D4AF37" stroke-width="10" stroke-linecap="round"/>
+</svg>

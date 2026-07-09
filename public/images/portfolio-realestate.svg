@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-labelledby="title">
+  <title id="title">Real estate sales center placeholder</title>
+  <rect width="900" height="900" fill="#070707"/>
+  <path d="M120 142h660v616H120z" fill="#151515" stroke="#fff" stroke-opacity="0.1"/>
+  <path d="M200 220h240v456H200zM492 220h208v456H492z" fill="#0a0a0a" stroke="#fff" stroke-opacity="0.08"/>
+  <path d="M246 312h148M246 364h104M540 312h112M540 364h86" stroke="#D4AF37" stroke-width="14" stroke-linecap="round"/>
+  <path d="M246 498h140M540 498h112" stroke="#fff" stroke-opacity="0.18" stroke-width="32" stroke-linecap="round"/>
+</svg>

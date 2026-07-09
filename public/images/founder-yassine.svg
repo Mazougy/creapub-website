@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="900" viewBox="0 0 720 900" role="img" aria-labelledby="title">
+  <title id="title">Yassine Marzougui profile placeholder</title>
+  <rect width="720" height="900" fill="#080808"/>
+  <path d="M0 0h720v900H0z" fill="#D4AF37" fill-opacity="0.06"/>
+  <circle cx="360" cy="314" r="122" fill="#1d1d1d" stroke="#D4AF37" stroke-opacity="0.42"/>
+  <path d="M146 780c24-168 128-270 214-270s190 102 214 270" fill="#151515" stroke="#fff" stroke-opacity="0.08"/>
+  <text x="360" y="828" text-anchor="middle" fill="#D4AF37" font-family="Arial, sans-serif" font-size="54" font-weight="900">YM</text>
+</svg>

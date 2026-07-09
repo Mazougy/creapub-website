@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760" role="img" aria-labelledby="title">
+  <title id="title">Clinic wayfinding placeholder</title>
+  <rect width="900" height="760" fill="#070707"/>
+  <path d="M120 130h660v500H120z" fill="#151515" stroke="#fff" stroke-opacity="0.12"/>
+  <path d="M190 210h250v100H190zM190 342h250v100H190zM190 474h250v100H190z" fill="#0a0a0a" stroke="#fff" stroke-opacity="0.08"/>
+  <path d="M500 218h196M500 350h156M500 482h206" stroke="#D4AF37" stroke-width="14" stroke-linecap="round"/>
+  <path d="M230 252h80M230 384h80M230 516h80" stroke="#fff" stroke-opacity="0.2" stroke-width="18" stroke-linecap="round"/>
+</svg>

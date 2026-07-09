@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="675" viewBox="0 0 900 675" role="img" aria-labelledby="title">
+  <title id="title">Halo LED channel letters placeholder</title>
+  <defs><radialGradient id="g" cx="54%" cy="35%" r="55%"><stop offset="0" stop-color="#D4AF37" stop-opacity="0.34"/><stop offset="1" stop-color="#050505" stop-opacity="0"/></radialGradient></defs>
+  <rect width="900" height="675" fill="#080808"/><rect width="900" height="675" fill="url(#g)"/>
+  <path d="M118 164h664v348H118z" fill="#121212" stroke="#fff" stroke-opacity="0.1"/>
+  <path d="M190 240h520v118H190z" fill="#050505" stroke="#D4AF37" stroke-opacity="0.42"/>
+  <text x="245" y="323" fill="#F5E8B7" font-family="Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="7">HALO</text>
+  <path d="M212 422h476" stroke="#D4AF37" stroke-width="18" stroke-linecap="round" opacity="0.75"/>
+</svg>

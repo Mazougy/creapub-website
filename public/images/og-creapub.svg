@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title">
+  <title id="title">Creapub premium visual communication</title>
+  <defs>
+    <radialGradient id="g" cx="68%" cy="18%" r="58%">
+      <stop offset="0" stop-color="#D4AF37" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#050505" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#050505"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <path d="M92 112h96v96H92z" fill="#D4AF37" fill-opacity="0.12" stroke="#D4AF37"/>
+  <text x="120" y="173" fill="#D4AF37" font-family="Arial, sans-serif" font-size="34" font-weight="900">CP</text>
+  <text x="92" y="310" fill="#fff" font-family="Arial, sans-serif" font-size="90" font-weight="800">Creapub</text>
+  <text x="94" y="378" fill="#D4AF37" font-family="Arial, sans-serif" font-size="34" font-weight="700">Là où vos idées deviennent visibles.</text>
+  <text x="96" y="468" fill="#fff" fill-opacity="0.7" font-family="Arial, sans-serif" font-size="30">Premium visual communication, signage, printing, and fabrication.</text>
+  <path d="M760 158h310v196H760z" fill="#111" stroke="#fff" stroke-opacity="0.12"/>
+  <path d="M802 206h226v54H802z" fill="#050505" stroke="#D4AF37" stroke-opacity="0.5"/>
+  <path d="M802 300h226" stroke="#D4AF37" stroke-width="10" stroke-linecap="round"/>
+</svg>

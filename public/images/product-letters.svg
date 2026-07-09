@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="675" viewBox="0 0 900 675" role="img" aria-labelledby="title">
+  <title id="title">Reception 3D logo wall placeholder</title>
+  <rect width="900" height="675" fill="#0b0b0b"/>
+  <path d="M0 0h900v675H0z" fill="#fff" fill-opacity="0.02"/>
+  <path d="M126 118h648v438H126z" fill="#161616" stroke="#fff" stroke-opacity="0.1"/>
+  <path d="M204 226h492v222H204z" fill="#0a0a0a"/>
+  <circle cx="337" cy="337" r="78" fill="#D4AF37" fill-opacity="0.14" stroke="#D4AF37"/>
+  <text x="430" y="360" fill="#fff" font-family="Arial, sans-serif" font-size="58" font-weight="800">SIGNATURE</text>
+  <path d="M432 389h230" stroke="#D4AF37" stroke-width="8" stroke-linecap="round"/>
+</svg>

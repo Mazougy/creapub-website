@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="675" viewBox="0 0 900 675" role="img" aria-labelledby="title">
+  <title id="title">Vehicle brand wrap placeholder</title>
+  <rect width="900" height="675" fill="#080808"/>
+  <path d="M112 426h676" stroke="#fff" stroke-opacity="0.1" stroke-width="6"/>
+  <path d="M190 320h392l100 88h74c22 0 40 18 40 40v30H126v-48l44-80c8-18 14-30 20-30z" fill="#181818" stroke="#fff" stroke-opacity="0.12"/>
+  <path d="M246 342h260l55 52H220z" fill="#050505" stroke="#D4AF37" stroke-opacity="0.28"/>
+  <path d="M250 462a48 48 0 1 0 96 0a48 48 0 0 0-96 0M620 462a48 48 0 1 0 96 0a48 48 0 0 0-96 0" fill="#050505" stroke="#D4AF37" stroke-width="8"/>
+  <text x="302" y="392" fill="#F1D67A" font-family="Arial, sans-serif" font-size="42" font-weight="900" letter-spacing="4">CREAPUB</text>
+</svg>

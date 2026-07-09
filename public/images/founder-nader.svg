@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="900" viewBox="0 0 720 900" role="img" aria-labelledby="title">
+  <title id="title">Nader Atig profile placeholder</title>
+  <rect width="720" height="900" fill="#070707"/>
+  <path d="M0 0h720v900H0z" fill="#fff" fill-opacity="0.025"/>
+  <circle cx="360" cy="314" r="122" fill="#1b1b1b" stroke="#D4AF37" stroke-opacity="0.42"/>
+  <path d="M130 780c30-160 134-270 230-270s200 110 230 270" fill="#151515" stroke="#fff" stroke-opacity="0.08"/>
+  <path d="M256 650h208" stroke="#D4AF37" stroke-width="10" stroke-linecap="round"/>
+  <text x="360" y="828" text-anchor="middle" fill="#D4AF37" font-family="Arial, sans-serif" font-size="54" font-weight="900">NA</text>
+</svg>
