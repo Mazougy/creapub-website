@@ -116,7 +116,7 @@ export function Contact() {
                     )}&body=${encodeURIComponent(JSON.stringify(data, null, 2))}`;
                     window.location.href = mailto;
                   }
-                } catch (err) {
+                } catch {
                   const mailto = `mailto:${encodeURIComponent("marzouguiadam82@gmail.com")}?subject=${encodeURIComponent(
                     "Demande depuis le site Creapub"
                   )}&body=${encodeURIComponent(JSON.stringify(data, null, 2))}`;

@@ -10,6 +10,30 @@ type Props = {
   address?: string;
 };
 
+type LeafletMap = {
+  remove(): void;
+};
+
+type LeafletMarker = {
+  bindPopup(content: string): {
+    openPopup(): void;
+  };
+};
+
+type LeafletNamespace = {
+  map(element: HTMLDivElement, options: { center: [number, number]; zoom: number; scrollWheelZoom: boolean }): LeafletMap;
+  tileLayer(url: string, options: { attribution: string; maxZoom: number }): {
+    addTo(map: LeafletMap): void;
+  };
+  marker(latlng: [number, number]): {
+    addTo(map: LeafletMap): LeafletMarker;
+  };
+};
+
+type LeafletWindow = Window & {
+  L?: LeafletNamespace;
+};
+
 function escapeHtml(str = "") {
   return str.replace(/[&<>"']/g, (m) => ({
     "&": "&amp;",
@@ -23,10 +47,11 @@ function escapeHtml(str = "") {
 export default function Map({ lat, lng, zoom = 15, name, address }: Props) {
   const ref = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
-    let map: any;
+    let map: LeafletMap | null = null;
+    const leafletWindow = window as LeafletWindow;
 
     function init() {
-      const L = (window as any).L;
+      const L = leafletWindow.L;
       if (!L || !ref.current) return;
 
       map = L.map(ref.current, { center: [lat, lng], zoom, scrollWheelZoom: false });
@@ -51,7 +76,7 @@ export default function Map({ lat, lng, zoom = 15, name, address }: Props) {
     }
 
     // Load Leaflet JS if needed, then init
-    if (!(window as any).L) {
+    if (!leafletWindow.L) {
       const script = document.createElement("script");
       script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
       script.async = true;
