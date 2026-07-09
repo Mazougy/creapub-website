@@ -8,9 +8,9 @@ import { LinkButton } from "@/components/ui/Buttons";
 import { company, targetMarkets } from "@/lib/content";
 
 const stats = [
-  { label: "Founded", value: 2025, prefix: "" },
-  { label: "Core services", value: 12, suffix: "+" },
-  { label: "Target sectors", value: 7, suffix: "+" },
+  { label: "Fondé", value: 2025, prefix: "" },
+  { label: "Services clés", value: 12, suffix: "+" },
+  { label: "Secteurs ciblés", value: 7, suffix: "+" },
 ];
 
 export function Hero() {
@@ -57,22 +57,22 @@ export function Hero() {
             {company.slogan}
           </div>
           <h1 className="font-display text-5xl font-semibold leading-[0.96] tracking-normal text-white md:text-7xl lg:text-8xl">
-            Premium visual communication for brands that need to be seen.
+            Communication visuelle premium pour les marques qui doivent être vues.
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
-            Creapub transforms restaurants, hotels, factories, clinics, retail spaces, real estate launches, and events into visible, memorable brand environments.
+            Creapub transforme restaurants, hôtels, usines, cliniques, espaces commerciaux, lancements immobiliers et événements en environnements de marque visibles et mémorables.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <LinkButton href="#contact" aria-label="Request a quote from Creapub">
-              Request a Quote
+            <LinkButton href="#contact" aria-label="Demander un devis à Creapub">
+              Demander un devis
             </LinkButton>
-            <LinkButton href="#portfolio" variant="secondary" aria-label="View Creapub portfolio">
-              View Selected Work
+            <LinkButton href="#portfolio" variant="secondary" aria-label="Voir le portfolio de Creapub">
+              Voir les réalisations
             </LinkButton>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-2" aria-label="Target markets">
+            <div className="mt-10 flex flex-wrap gap-2" aria-label="Marchés cibles">
             {targetMarkets.map((market) => (
               <span
                 key={market}
@@ -110,7 +110,7 @@ export function Hero() {
         aria-label="Scroll to services"
       >
         <ArrowDown className="h-4 w-4" aria-hidden="true" />
-        Explore
+        Explorer
       </a>
     </section>
   );

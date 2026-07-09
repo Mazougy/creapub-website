@@ -32,9 +32,9 @@ export function Services() {
     <section id="services" className="bg-ink py-24 md:py-32">
       <div className="container-padded">
         <SectionHeader
-          eyebrow="Capabilities"
-          title="From concept to installed brand presence."
-          description="A complete visual communication studio for campaigns, commercial spaces, industrial sites, and high-impact signage."
+          eyebrow="Compétences"
+          title="Du concept à la présence de marque installée."
+          description="Un studio complet de communication visuelle pour campagnes, espaces commerciaux, sites industriels et signalétique à fort impact."
         />
 
         <motion.div

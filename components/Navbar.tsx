@@ -7,9 +7,9 @@ import { company } from "@/lib/content";
 
 const navItems = [
   { label: "Services", href: "#services" },
-  { label: "Products", href: "#products" },
-  { label: "Process", href: "#process" },
-  { label: "Work", href: "#portfolio" },
+  { label: "Produits", href: "#products" },
+  { label: "Processus", href: "#process" },
+  { label: "Réalisations", href: "#portfolio" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -33,8 +33,8 @@ export function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
     >
-      <nav className="container-padded flex h-20 items-center justify-between" aria-label="Primary navigation">
-        <a href="#top" className="flex items-center gap-3" aria-label="Creapub home">
+      <nav className="container-padded flex h-20 items-center justify-between" aria-label="Navigation principale">
+        <a href="#top" className="flex items-center gap-3" aria-label="Accueil Creapub">
           <span className="grid h-10 w-10 place-items-center rounded-lg border border-gold/50 bg-gold/12 text-sm font-black text-gold">
             CP
           </span>
@@ -62,16 +62,16 @@ export function Navbar() {
           href="#contact"
           className="hidden min-h-11 items-center rounded-full border border-gold/40 bg-gold/12 px-5 text-sm font-semibold text-gold transition hover:bg-gold hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:inline-flex"
         >
-          Request a Quote
+          Demander un devis
         </a>
 
-        <button
+          <button
           type="button"
           className="grid h-11 w-11 place-items-center rounded-lg border border-white/12 text-white lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
           aria-controls="mobile-menu"
-          aria-label="Toggle menu"
+          aria-label="Basculer le menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -95,7 +95,7 @@ export function Navbar() {
               className="mt-2 rounded-full bg-gold px-5 py-3 text-center text-sm font-semibold text-black"
               onClick={() => setOpen(false)}
             >
-              Request a Quote
+              Demander un devis
             </a>
           </div>
         </div>

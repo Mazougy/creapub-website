@@ -13,26 +13,26 @@ export function CTA() {
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
                 <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-gold">
-                  Ready for visibility
+                  Prêts pour la visibilité
                 </p>
                 <h2 className="max-w-3xl font-display text-3xl font-semibold tracking-normal text-white md:text-5xl">
-                  Turn your next location, launch, or fleet into a premium brand asset.
+                  Transformez votre prochain emplacement, lancement ou flotte en un actif de marque premium.
                 </h2>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-                <LinkButton href={company.whatsapp} icon="whatsapp" aria-label="Contact Creapub on WhatsApp">
+                <LinkButton href={company.whatsapp} icon="whatsapp" aria-label="Contacter Creapub sur WhatsApp">
                   WhatsApp
                 </LinkButton>
-                <LinkButton href="#contact" variant="secondary" aria-label="Request a Creapub quote">
-                  Quote
+                <LinkButton href="#contact" variant="secondary" aria-label="Demander un devis Creapub">
+                  Devis
                 </LinkButton>
                 <a
                   href={`tel:${company.phone.replace(/\s/g, "")}`}
                   className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/12 px-5 text-sm font-semibold text-white/78 transition hover:border-gold/60 hover:text-gold"
-                  aria-label="Call Creapub"
+                  aria-label="Appeler Creapub"
                 >
                   <Phone className="h-4 w-4" aria-hidden="true" />
-                  Call
+                  Appeler
                 </a>
               </div>
             </div>

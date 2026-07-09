@@ -10,22 +10,22 @@ export function Products() {
     <section id="products" className="bg-black py-24 md:py-32">
       <div className="container-padded">
         <SectionHeader
-          eyebrow="Products"
-          title="Premium production packages, tailored to each site."
-          description="Clear product cards help teams compare materials, timing, and best-use cases before requesting an exact quote."
+          eyebrow="Produits"
+          title="Packs de production premium, adaptés à chaque site."
+          description="Des fiches produits claires aident les équipes à comparer matériaux, délais et cas d'usage avant de demander un devis précis."
         />
 
         <div className="grid gap-5 lg:grid-cols-4">
           {products.map((product, index) => (
             <Reveal key={product.name} delay={index * 0.04}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-ink-panel transition duration-300 hover:-translate-y-1 hover:border-gold/45 hover:shadow-gold">
+                <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-ink-panel transition duration-300 md:hover:-translate-y-1 md:hover:border-gold/45 md:hover:shadow-gold min-h-[480px]">
                 <div className="relative aspect-[4/3] overflow-hidden bg-white/[0.03]">
                   <Image
                     src={product.image}
                     alt={`${product.name} visual placeholder`}
                     fill
                     sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
-                    className="object-cover transition duration-500 group-hover:scale-105"
+                    className="object-cover transition duration-500 md:group-hover:scale-105"
                     loading="lazy"
                   />
                   <span className="absolute left-4 top-4 rounded-full border border-gold/40 bg-black/60 px-3 py-1 text-xs font-semibold text-gold backdrop-blur">
@@ -34,10 +34,11 @@ export function Products() {
                 </div>
 
                 <div className="flex flex-1 flex-col p-5">
-                  <h3 className="text-xl font-semibold text-white">{product.name}</h3>
-                  <p className="mt-3 text-sm leading-6 text-white/58">{product.material}</p>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{product.name}</h3>
+                    <p className="mt-3 text-sm leading-6 text-white/58">{product.material}</p>
 
-                  <dl className="mt-5 grid gap-3 text-sm text-white/66">
+                    <dl className="mt-5 grid gap-3 text-sm text-white/66">
                     <div className="flex gap-2">
                       <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
                       <div>
@@ -66,15 +67,16 @@ export function Products() {
                         <dd>{product.price}</dd>
                       </div>
                     </div>
-                  </dl>
+                    </dl>
+                  </div>
 
-                  <div className="mt-6 grid gap-2">
-                    <LinkButton href="#contact" className="w-full" aria-label={`Request quote for ${product.name}`}>
-                      Request Quote
+                  <div className="mt-auto grid gap-4 pt-3">
+                    <LinkButton href="#contact" className="w-full py-3" aria-label={`Request quote for ${product.name}`}>
+                      Demander un devis
                     </LinkButton>
                     <a
                       href={company.whatsapp}
-                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/12 text-sm font-semibold text-white/78 transition hover:border-gold/50 hover:text-gold"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/12 text-sm font-semibold text-white/78 transition hover:border-gold/50 hover:text-gold py-3"
                       aria-label={`Ask about ${product.name} on WhatsApp`}
                     >
                       <MessageCircle className="h-4 w-4" aria-hidden="true" />

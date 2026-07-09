@@ -8,7 +8,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { portfolioItems } from "@/lib/content";
 
-const filters = ["All", "Restaurants", "Hotels", "Factories", "Retail", "Clinics", "Real Estate"];
+const filters = ["Tous", "Restaurants", "Hôtels", "Usines", "Commerce de détail", "Cliniques", "Immobilier"];
 
 export function Portfolio() {
   const [active, setActive] = useState("All");
@@ -22,11 +22,11 @@ export function Portfolio() {
       <div className="container-padded">
         <SectionHeader
           eyebrow="Portfolio"
-          title="Selected visibility systems across demanding environments."
-          description="Each project balances brand impression, site reality, material behavior, and customer flow."
+          title="Systèmes de visibilité sélectionnés dans des environnements exigeants."
+          description="Chaque projet équilibre l'impact de la marque, la réalité du site, le comportement des matériaux et le flux client."
         />
 
-        <Reveal className="mb-9 flex flex-wrap justify-center gap-2" aria-label="Portfolio category filters">
+        <Reveal className="mb-9 flex flex-wrap justify-center gap-2" aria-label="Filtres de catégorie du portfolio">
           {filters.map((filter) => (
             <button
               key={filter}
@@ -68,8 +68,8 @@ export function Portfolio() {
                     loading="lazy"
                   />
                   <div className="absolute inset-x-4 top-4 flex justify-between text-xs font-semibold uppercase tracking-[0.14em] text-white/78">
-                    <span className="rounded-full bg-black/55 px-3 py-1 backdrop-blur">Before</span>
-                    <span className="rounded-full bg-gold px-3 py-1 text-black">After</span>
+                    <span className="rounded-full bg-black/55 px-3 py-1 backdrop-blur">Avant</span>
+                    <span className="rounded-full bg-gold px-3 py-1 text-black">Après</span>
                   </div>
                 </div>
                 <div className="p-5">

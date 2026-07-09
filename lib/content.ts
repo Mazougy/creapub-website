@@ -2,216 +2,220 @@ export const company = {
   name: "Creapub",
   slogan: "Là où vos idées deviennent visibles.",
   founded: "2025",
-  email: "hello@creapub.com",
+  // Form submissions will be sent to this address by default
+  email: "marzouguiadam82@gmail.com",
   phone: "+216 55 000 000",
   whatsapp: "https://wa.me/21655000000",
-  address: "Visual production studio serving Africa and the Gulf",
-  hours: "Monday to Saturday, 8:30 AM - 6:30 PM",
+  address: "Studio de production visuelle desservant l'Afrique et le Golfe",
+  hours: "Lundi au samedi, 8h30 - 18h30",
+  // Optional coordinates for map embedding. Set to non-zero values to enable map.
+  lat: 33.896653,
+  lng: 10.079606,
 };
 
 export const targetMarkets = [
   "Restaurants",
-  "Hotels",
-  "Factories",
-  "Retail",
-  "Real Estate",
-  "Clinics",
-  "Events",
+  "Hôtels",
+  "Usines",
+  "Commerce de détail",
+  "Immobilier",
+  "Cliniques",
+  "Événements",
 ];
 
 export const services = [
   {
     icon: "Printer",
-    title: "Large Format Printing",
+    title: "Impression grand format",
     description:
-      "Crisp indoor and outdoor prints for campaigns, facades, exhibitions, and high-traffic commercial spaces.",
+      "Impressions nettes intérieures et extérieures pour campagnes, façades, expositions et espaces commerciaux à fort trafic.",
   },
   {
     icon: "Lightbulb",
-    title: "LED Signs",
+    title: "Enseignes LED",
     description:
-      "High-visibility illuminated signage engineered for daily performance, weather resistance, and premium storefront presence.",
+      "Enseignes lumineuses haute visibilité, conçues pour la performance quotidienne, la résistance aux intempéries et une présence premium en vitrine.",
   },
   {
     icon: "Box",
-    title: "3D Letters",
+    title: "Lettres 3D",
     description:
-      "Dimensional logos and lettering in acrylic, stainless steel, aluminum, PVC, and composite materials.",
+      "Logos et lettrages dimensionnels en acrylique, acier inoxydable, aluminium, PVC et matériaux composites.",
   },
   {
     icon: "Scissors",
-    title: "Laser Cutting",
+    title: "Découpe laser",
     description:
-      "Precision cutting and engraving for branded displays, decorative panels, labels, and custom fabrication details.",
+      "Découpe et gravure de précision pour habillages de marque, panneaux décoratifs, étiquettes et détails de fabrication sur mesure.",
   },
   {
     icon: "Cog",
-    title: "CNC Production",
+    title: "Production CNC",
     description:
-      "Industrial routing for signage, wall features, retail fixtures, templates, and large-scale custom pieces.",
+      "Usinage industriel pour signalétique, éléments muraux, agencements de vente, gabarits et pièces sur mesure de grande taille.",
   },
   {
     icon: "Truck",
-    title: "Vehicle Branding",
+    title: "Covering véhicule",
     description:
-      "Fleet wraps, partial wraps, and durable decals that turn service vehicles into moving brand assets.",
+      "Coverings complets ou partiels et décalcomanies durables transformant les véhicules en supports de marque mobiles.",
   },
   {
     icon: "PanelTop",
-    title: "Interior Branding",
+    title: "Branding intérieur",
     description:
-      "Reception walls, wayfinding, glass films, murals, and branded environments for polished customer experiences.",
+      "Murs de réception, signalétique intérieure, films sur verre, fresques et environnements brandés pour une expérience client soignée.",
   },
   {
     icon: "Store",
-    title: "Storefront Design",
+    title: "Conception de façade",
     description:
-      "Complete visual facade systems that align materials, lighting, scale, and installation into one refined result.",
+      "Systèmes complets de façades visuelles alignant matériaux, éclairage, échelle et installation pour un résultat soigné.",
   },
   {
     icon: "BadgeCheck",
-    title: "Business Essentials",
+    title: "Essentiels business",
     description:
-      "Roll ups, business cards, directional signage, and custom fabrication produced with the same premium standard.",
+      "Roll ups, cartes de visite, signalétique directionnelle et fabrications personnalisées produits au même standard premium.",
   },
 ];
 
 export const products = [
   {
-    name: "Halo LED Channel Letters",
-    material: "Brushed aluminum, acrylic diffuser",
-    environment: "Outdoor",
-    sizes: "40 cm - 220 cm letters",
-    production: "7-12 business days",
-    badge: "Most requested",
-    price: "Quote after survey",
+    name: "Lettres boîtiers LED Halo",
+    material: "Aluminium brossé, diffuseur acrylique",
+    environment: "Extérieur",
+    sizes: "Lettres de 40 cm à 220 cm",
+    production: "7-12 jours ouvrables",
+    badge: "Le plus demandé",
+    price: "Devis après visite",
     image: "/images/product-led.svg",
   },
   {
-    name: "Reception 3D Logo Wall",
-    material: "Acrylic, PVC, stainless steel finish",
-    environment: "Indoor",
-    sizes: "120 cm - 500 cm wall span",
-    production: "5-9 business days",
-    badge: "Premium finish",
-    price: "From project scope",
+    name: "Mur logo 3D pour réception",
+    material: "Acrylique, PVC, finition inox",
+    environment: "Intérieur",
+    sizes: "120 cm - 500 cm de largeur",
+    production: "5-9 jours ouvrables",
+    badge: "Finition premium",
+    price: "Selon l'envergure du projet",
     image: "/images/product-letters.svg",
   },
   {
-    name: "Full Vehicle Brand Wrap",
-    material: "Cast vinyl, UV laminate",
-    environment: "Outdoor",
-    sizes: "Cars, vans, trucks, fleets",
-    production: "3-6 business days",
-    badge: "Fleet ready",
-    price: "Survey required",
+    name: "Covering véhicule complet",
+    material: "Vinyle polymère, laminat UV",
+    environment: "Extérieur",
+    sizes: "Voitures, utilitaires, camions, flottes",
+    production: "3-6 jours ouvrables",
+    badge: "Prêt pour flotte",
+    price: "Visite technique requise",
     image: "/images/product-vehicle.svg",
   },
   {
-    name: "Retail Window Campaign Kit",
-    material: "Vinyl, one-way vision, cut lettering",
-    environment: "Indoor / Outdoor",
-    sizes: "Single display to multi-branch",
-    production: "2-5 business days",
-    badge: "Fast launch",
-    price: "Custom bundle",
+    name: "Kit campagne vitrine",
+    material: "Vinyle, one-way vision, lettrage découpé",
+    environment: "Intérieur / Extérieur",
+    sizes: "De l'unique vitrine au multi-sites",
+    production: "2-5 jours ouvrables",
+    badge: "Lancement rapide",
+    price: "Pack sur mesure",
     image: "/images/product-retail.svg",
   },
 ];
 
 export const processSteps = [
-  { title: "Discovery", detail: "We clarify objectives, location, audience, and technical constraints.", icon: "Search" },
-  { title: "Site Survey", detail: "Measurements, surfaces, power points, traffic, and installation access are checked.", icon: "Ruler" },
-  { title: "Concept", detail: "Creative direction and material recommendations are shaped around visibility.", icon: "Sparkles" },
-  { title: "Estimate", detail: "You receive a clear scope, timing, options, and production assumptions.", icon: "FileText" },
-  { title: "Design", detail: "Artwork is refined for scale, legibility, color, and premium production.", icon: "PenTool" },
-  { title: "Prototype", detail: "Critical details are sampled or mocked up before full production.", icon: "Layers" },
-  { title: "Production", detail: "Printing, cutting, lighting, assembly, and finishing happen under one workflow.", icon: "Factory" },
-  { title: "Installation", detail: "Our team installs with clean alignment, durable mounting, and site protection.", icon: "Wrench" },
-  { title: "Aftercare", detail: "We support maintenance guidance, future updates, and campaign rollouts.", icon: "ShieldCheck" },
+  { title: "Découverte", detail: "Nous clarifions objectifs, emplacement, public et contraintes techniques.", icon: "Search" },
+  { title: "Visite de site", detail: "Mesures, surfaces, points électriques, circulation et accès d'installation sont vérifiés.", icon: "Ruler" },
+  { title: "Concept", detail: "Direction créative et recommandations de matériaux centrées sur la visibilité.", icon: "Sparkles" },
+  { title: "Estimation", detail: "Vous recevez un périmètre clair, un calendrier, des options et des hypothèses de production.", icon: "FileText" },
+  { title: "Conception", detail: "Les visuels sont raffinés pour l'échelle, la lisibilité, la couleur et une production premium.", icon: "PenTool" },
+  { title: "Prototype", detail: "Les détails critiques sont échantillonnés ou maquettés avant production complète.", icon: "Layers" },
+  { title: "Production", detail: "Impression, découpe, éclairage, assemblage et finition dans un workflow unifié.", icon: "Factory" },
+  { title: "Installation", detail: "Notre équipe installe avec alignement soigné, fixations durables et protection du site.", icon: "Wrench" },
+  { title: "Après-vente", detail: "Nous accompagnons la maintenance, les mises à jour futures et le déploiement des campagnes.", icon: "ShieldCheck" },
 ];
 
 export const values = [
-  "Visibility before decoration",
-  "Material honesty",
-  "Precision at every scale",
-  "Fast, transparent delivery",
+  "Visibilité avant décoration",
+  "Honnêteté des matériaux",
+  "Précision à chaque échelle",
+  "Livraison rapide et transparente",
 ];
 
 export const founders = [
   {
     name: "Yassine Marzougui",
-    role: "Marketing & Brand Strategy",
+    role: "Marketing et stratégie de marque",
     image: "/images/founder-yassine.svg",
-    bio: "Yassine turns commercial objectives into visual systems that customers notice, understand, and remember. His focus is positioning, campaign clarity, and brand consistency across every public touchpoint.",
+    bio: "Yassine transforme des objectifs commerciaux en systèmes visuels que les clients remarquent, comprennent et mémorisent. Il se concentre sur le positionnement, la clarté des campagnes et la cohérence de la marque à chaque point de contact.",
   },
   {
     name: "Nader Atig",
-    role: "Production & Technical Excellence",
+    role: "Production et excellence technique",
     image: "/images/founder-nader.svg",
-    bio: "Nader leads production with a maker's eye for tolerances, materials, lighting, and installation quality. His work turns ambitious concepts into durable, precise, site-ready results.",
+    bio: "Nader dirige la production avec l'œil d'un artisan pour les tolérances, les matériaux, l'éclairage et la qualité d'installation. Son travail transforme des concepts ambitieux en résultats durables, précis et prêts pour le site.",
   },
 ];
 
 export const portfolioItems = [
   {
-    title: "Fine Dining Facade System",
+    title: "Façade pour restaurant gastronomique",
     category: "Restaurants",
     image: "/images/portfolio-restaurant.svg",
-    result: "Illuminated channel letters and window graphics for a premium night-time presence.",
+    result: "Lettres boîtiers illuminées et habillages vitrine pour une présence nocturne premium.",
   },
   {
-    title: "Clinic Directional Suite",
-    category: "Clinics",
+    title: "Ensemble signalétique pour clinique",
+    category: "Cliniques",
     image: "/images/portfolio-clinic.svg",
-    result: "Clean wayfinding, privacy films, and reception signage built for trust and flow.",
+    result: "Signalétique claire, films d'intimité et panneaux de réception conçus pour la confiance et la fluidité.",
   },
   {
-    title: "Factory Safety & Brand Program",
-    category: "Factories",
+    title: "Programme sécurité et identité usine",
+    category: "Usines",
     image: "/images/portfolio-factory.svg",
-    result: "Large-format safety signage, zone markers, and exterior identity panels.",
+    result: "Signalétique de sécurité grand format, marquage de zones et panneaux d'identité extérieurs.",
   },
   {
-    title: "Hotel Lobby Identity Wall",
-    category: "Hotels",
+    title: "Mur d'identité pour hall d'hôtel",
+    category: "Hôtels",
     image: "/images/portfolio-hotel.svg",
-    result: "Layered metal and acrylic mark with subtle warm lighting at guest arrival.",
+    result: "Logotype en métal et acrylique en couches avec éclairage chaud subtil à l'arrivée des clients.",
   },
   {
-    title: "Retail Launch Campaign",
-    category: "Retail",
+    title: "Campagne de lancement retail",
+    category: "Commerce de détail",
     image: "/images/portfolio-retail.svg",
-    result: "Window campaign, interior category signage, and launch roll ups.",
+    result: "Campagne vitrine, signalétique intérieure par catégorie et roll-ups de lancement.",
   },
   {
-    title: "Real Estate Sales Center",
-    category: "Real Estate",
+    title: "Centre de vente immobilier",
+    category: "Immobilier",
     image: "/images/portfolio-realestate.svg",
-    result: "Premium panels, project maps, model-area signage, and presentation graphics.",
+    result: "Panneaux premium, plans de projet, signalétique d'espaces maquette et supports de présentation.",
   },
 ];
 
 export const testimonials = [
   {
     name: "Amira K.",
-    business: "Restaurant Group",
+    business: "Groupe de restauration",
     image: "/images/client-amira.svg",
     review:
-      "Creapub understood the difference between making a sign and creating presence. Our storefront now looks established, confident, and visible from the street.",
+      "Creapub a compris la différence entre fabriquer une enseigne et créer une présence. Notre devanture semble désormais établie, confiante et visible depuis la rue.",
   },
   {
     name: "Sami B.",
-    business: "Industrial Manufacturer",
+    business: "Fabricant industriel",
     image: "/images/client-sami.svg",
     review:
-      "Their technical team handled scale, safety, materials, and installation with impressive precision. The final result feels built to last.",
+      "Leur équipe technique a géré l'échelle, la sécurité, les matériaux et l'installation avec une précision impressionnante. Le résultat final paraît conçu pour durer.",
   },
   {
     name: "Leila M.",
-    business: "Private Clinic",
+    business: "Clinique privée",
     image: "/images/client-leila.svg",
     review:
-      "The clinic signage is calm, premium, and easy to navigate. Patients notice the difference before they even reach reception.",
+      "La signalétique de la clinique est apaisante, de qualité premium et facile à parcourir. Les patients remarquent la différence avant même d'arriver à l'accueil.",
   },
 ];

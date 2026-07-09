@@ -9,16 +9,16 @@ export function Testimonials() {
     <section id="testimonials" className="bg-ink py-24 md:py-32">
       <div className="container-padded">
         <SectionHeader
-          eyebrow="Client signal"
-          title="Premium does not need to shout. It needs to hold up."
-          description="Realistic client feedback from the types of businesses Creapub is built to serve."
+          eyebrow="Avis clients"
+          title="Le premium n'a pas besoin de crier. Il doit tenir la distance."
+          description="Retours clients représentatifs des types d'entreprises que Creapub sert."
         />
 
         <div className="grid gap-5 md:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <Reveal key={testimonial.name} delay={index * 0.05}>
               <article className="glass-panel h-full rounded-lg p-6">
-                <div className="mb-6 flex gap-1 text-gold" aria-label="Five star review">
+                <div className="mb-6 flex gap-1 text-gold" aria-label="Avis cinq étoiles">
                   {Array.from({ length: 5 }).map((_, starIndex) => (
                     <Star key={starIndex} className="h-4 w-4 fill-current" aria-hidden="true" />
                   ))}

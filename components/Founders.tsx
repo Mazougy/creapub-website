@@ -9,16 +9,16 @@ export function Founders() {
     <section id="founders" className="bg-ink py-24 md:py-32">
       <div className="container-padded">
         <SectionHeader
-          eyebrow="Founders"
-          title="Strategy and production, aligned from day one."
-          description="Creapub is led by complementary founders who connect brand clarity with technical execution."
+          eyebrow="Fondateurs"
+          title="Stratégie et production, alignées dès le premier jour."
+          description="Creapub est dirigé par des fondateurs complémentaires qui relient la clarté de la marque à l'exécution technique."
         />
 
         <div className="grid gap-5 md:grid-cols-2">
           {founders.map((founder, index) => (
             <Reveal key={founder.name} delay={index * 0.06}>
-              <article className="grid overflow-hidden rounded-lg border border-white/10 bg-black md:grid-cols-[0.9fr_1.1fr]">
-                <div className="relative min-h-80 bg-white/[0.035]">
+              <article className="grid overflow-hidden rounded-lg border border-white/10 bg-black md:grid-cols-[0.9fr_1.1fr] min-h-[360px] md:min-h-[420px]">
+                <div className="relative min-h-72 md:min-h-96 bg-white/[0.035]">
                   <Image
                     src={founder.image}
                     alt={`${founder.name} profile placeholder`}

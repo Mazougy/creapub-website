@@ -60,7 +60,7 @@ export function Process() {
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <div className="rounded-lg border border-white/10 bg-white/[0.035] p-6 lg:w-[calc(50%-3rem)]">
-                    <p className="mb-3 text-sm font-semibold text-gold">Step {index + 1}</p>
+                    <p className="mb-3 text-sm font-semibold text-gold">Étape {index + 1}</p>
                     <h3 className="text-xl font-semibold text-white">{step.title}</h3>
                     <p className="mt-3 leading-7 text-white/58">{step.detail}</p>
                   </div>
