@@ -2,8 +2,8 @@
 
 import { motion, useScroll } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { company } from "@/lib/content";
 
 const navItems = [
   { label: "Services", href: "#services" },
@@ -34,16 +34,15 @@ export function Navbar() {
       transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
     >
       <nav className="container-padded flex h-20 items-center justify-between" aria-label="Navigation principale">
-        <a href="#top" className="flex items-center gap-3" aria-label="Accueil Creapub">
-          <span className="grid h-10 w-10 place-items-center rounded-lg border border-gold/50 bg-gold/12 text-sm font-black text-gold">
-            CP
-          </span>
-          <span className="leading-none">
-            <span className="block font-display text-lg font-semibold text-white">{company.name}</span>
-            <span className="hidden text-[11px] uppercase tracking-[0.22em] text-white/48 sm:block">
-              Visual communication
-            </span>
-          </span>
+        <a href="#top" className="relative block h-11 w-[184px] shrink-0 sm:w-[216px]" aria-label="Accueil Creapub">
+          <Image
+            src="/images/logo.svg"
+            alt="Creapub"
+            fill
+            priority
+            sizes="(min-width: 640px) 216px, 184px"
+            className="object-contain object-left"
+          />
         </a>
 
         <div className="hidden items-center gap-8 lg:flex">
@@ -65,7 +64,7 @@ export function Navbar() {
           Demander un devis
         </a>
 
-          <button
+        <button
           type="button"
           className="grid h-11 w-11 place-items-center rounded-lg border border-white/12 text-white lg:hidden"
           onClick={() => setOpen((value) => !value)}
