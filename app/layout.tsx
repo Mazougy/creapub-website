@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import "../styles/globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.creapub.com"),
@@ -64,7 +65,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
