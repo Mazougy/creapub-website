@@ -35,7 +35,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: true, info });
     } catch (err) {
       // Log error to server console for debugging
-      // eslint-disable-next-line no-console
       console.error("/api/contact error:", err);
       return NextResponse.json({ ok: false, error: String(err) }, { status: 500 });
     }
@@ -62,11 +61,9 @@ export async function POST(request: Request) {
     });
 
     const previewUrl = nodemailer.getTestMessageUrl(info) || null;
-    // eslint-disable-next-line no-console
     console.info("Ethereal preview URL:", previewUrl);
     return NextResponse.json({ ok: true, previewUrl, info });
   } catch (err) {
-    // eslint-disable-next-line no-console
     console.error("/api/contact ethereal error:", err);
     // SMTP not configured and fallback failed — inform caller so client can fallback to mailto.
     return NextResponse.json({ ok: false, error: "SMTP not configured" }, { status: 501 });

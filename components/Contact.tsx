@@ -75,7 +75,7 @@ export function Contact() {
                       <MapPin className="h-7 w-7" aria-hidden="true" />
                     </div>
                     <p className="absolute bottom-5 left-5 right-5 text-sm text-white/58">
-                      Map placeholder pour la salle d'exposition, l'unité de production et le lieu de rendez-vous client.
+                      Map placeholder pour la salle d'exposition, l&apos;unité de production et le lieu de rendez-vous client.
                     </p>
                   </>
                 )}
