@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
-import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { testimonials } from "@/lib/content";
 
@@ -15,9 +14,8 @@ export function Testimonials() {
         />
 
         <div className="grid gap-5 md:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
-            <Reveal key={testimonial.name} delay={index * 0.05}>
-              <article className="glass-panel h-full rounded-3xl p-6">
+          {testimonials.map((testimonial) => (
+            <article key={testimonial.name} className="rounded-3xl border border-brand/12 bg-white p-6 shadow-sm">
                 <div className="mb-6 flex gap-1 text-brand" aria-label="Avis cinq étoiles">
                   {Array.from({ length: 5 }).map((_, starIndex) => (
                     <Star key={starIndex} className="h-4 w-4 fill-current" aria-hidden="true" />
@@ -39,7 +37,6 @@ export function Testimonials() {
                   </div>
                 </div>
               </article>
-            </Reveal>
           ))}
         </div>
       </div>

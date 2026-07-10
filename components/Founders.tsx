@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Linkedin, Mail } from "lucide-react";
-import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { founders } from "@/lib/content";
 
@@ -15,9 +14,8 @@ export function Founders() {
         />
 
         <div className="grid gap-5 md:grid-cols-2">
-          {founders.map((founder, index) => (
-            <Reveal key={founder.name} delay={index * 0.06}>
-              <article className="grid overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-soft md:grid-cols-[0.9fr_1.1fr]">
+          {founders.map((founder) => (
+            <article key={founder.name} className="grid overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-sm md:grid-cols-[0.9fr_1.1fr]">
                 <div className="relative min-h-56 bg-surface-blue sm:min-h-72 md:min-h-96">
                   <Image
                     src={founder.image}
@@ -54,7 +52,6 @@ export function Founders() {
                   </div>
                 </div>
               </article>
-            </Reveal>
           ))}
         </div>
       </div>

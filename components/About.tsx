@@ -1,5 +1,4 @@
 import { Eye, Gem, Globe2, Target } from "lucide-react";
-import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { company, values } from "@/lib/content";
 
@@ -16,28 +15,24 @@ export function About() {
           />
 
           <div className="grid gap-4 sm:grid-cols-2">
-            <Reveal>
-              <article className="rounded-3xl border border-brand/12 bg-white p-6 shadow-soft">
-                <Target className="mb-5 h-6 w-6 text-brand" aria-hidden="true" />
-                <h3 className="text-xl font-semibold text-navy">Mission</h3>
-                <p className="mt-4 leading-7 text-navy/60">
-                  Transformer les entreprises en marques visibles et mémorables grâce à une communication visuelle premium.
-                </p>
-              </article>
-            </Reveal>
-            <Reveal delay={0.04}>
-              <article className="rounded-3xl border border-brand/12 bg-white p-6 shadow-soft">
-                <Globe2 className="mb-5 h-6 w-6 text-brand" aria-hidden="true" />
-                <h3 className="text-xl font-semibold text-navy">Vision</h3>
-                <p className="mt-4 leading-7 text-navy/60">
-                  Devenir la référence de la communication visuelle en Afrique et dans la région du Golfe.
-                </p>
-              </article>
-            </Reveal>
+            <article className="rounded-3xl border border-brand/12 bg-white p-6 shadow-sm">
+              <Target className="mb-5 h-6 w-6 text-brand" aria-hidden="true" />
+              <h3 className="text-xl font-semibold text-navy">Mission</h3>
+              <p className="mt-4 leading-7 text-navy/60">
+                Transformer les entreprises en marques visibles et mémorables grâce à une communication visuelle premium.
+              </p>
+            </article>
+            <article className="rounded-3xl border border-brand/12 bg-white p-6 shadow-sm">
+              <Globe2 className="mb-5 h-6 w-6 text-brand" aria-hidden="true" />
+              <h3 className="text-xl font-semibold text-navy">Vision</h3>
+              <p className="mt-4 leading-7 text-navy/60">
+                Devenir la référence de la communication visuelle en Afrique et dans la région du Golfe.
+              </p>
+            </article>
           </div>
         </div>
 
-        <Reveal className="mt-10 rounded-3xl border border-brand/12 bg-white p-6 shadow-soft md:p-8">
+        <div className="mt-10 rounded-3xl border border-brand/12 bg-white p-6 shadow-sm md:p-8">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
             <div>
               <Eye className="mb-5 h-7 w-7 text-brand" aria-hidden="true" />
@@ -55,7 +50,7 @@ export function About() {
               ))}
             </div>
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

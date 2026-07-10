@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Factory,
   FileText,
@@ -11,7 +9,6 @@ import {
   Sparkles,
   Wrench,
 } from "lucide-react";
-import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { processSteps } from "@/lib/content";
 
@@ -46,25 +43,21 @@ export function Process() {
               const right = index % 2 === 1;
 
               return (
-                <motion.article
+                <article
                   key={step.title}
                   className={`relative grid gap-4 md:grid-cols-[72px_1fr] lg:grid-cols-2 ${
                     right ? "lg:[&>div:last-child]:col-start-2" : ""
                   }`}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-90px" }}
-                  transition={{ duration: 0.55, delay: index * 0.03 }}
                 >
-                  <div className="relative z-10 grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-brand/30 bg-white text-brand shadow-soft md:mx-auto lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+                  <div className="relative z-10 grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-brand/30 bg-white text-brand shadow-sm md:mx-auto lg:absolute lg:left-1/2 lg:-translate-x-1/2">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <div className="rounded-3xl border border-brand/12 bg-white p-6 shadow-soft lg:w-[calc(50%-3rem)]">
+                  <div className="rounded-3xl border border-brand/12 bg-white p-6 shadow-sm lg:w-[calc(50%-3rem)]">
                     <p className="mb-3 text-sm font-semibold text-brand">Étape {index + 1}</p>
                     <h3 className="text-xl font-semibold text-navy">{step.title}</h3>
                     <p className="mt-3 leading-7 text-navy/55">{step.detail}</p>
                   </div>
-                </motion.article>
+                </article>
               );
             })}
           </div>

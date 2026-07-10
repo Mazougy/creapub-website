@@ -1,7 +1,6 @@
 "use client";
 
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
-import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { company } from "@/lib/content";
 
@@ -16,9 +15,8 @@ export function Contact() {
         />
 
         <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal>
-            <div className="grid gap-5">
-              <div className="rounded-3xl border border-brand/12 bg-white p-6 shadow-soft">
+          <div className="grid gap-5">
+            <div className="rounded-3xl border border-brand/12 bg-white p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-navy">Informations du studio</h3>
                 <div className="mt-6 grid gap-4 text-navy/65">
                   <p className="flex gap-3">
@@ -58,9 +56,9 @@ export function Contact() {
                     </a>
                   ))}
                 </div>
-              </div>
+            </div>
 
-              <div className="relative min-h-72 overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-soft">
+            <div className="relative min-h-72 overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-sm">
                 {company.lat && company.lng ? (
                   <iframe
                     title="Creapub location"
@@ -80,11 +78,10 @@ export function Contact() {
                   </>
                 )}
               </div>
-            </div>
-          </Reveal>
+          </div>
 
-          <Reveal delay={0.06}>
-            <form
+          <div id="contact-form">
+            <form 
               className="rounded-3xl border border-brand/12 bg-white p-6 shadow-soft md:p-8"
               aria-label="Formulaire de contact"
               onSubmit={async (e) => {
@@ -206,7 +203,7 @@ export function Contact() {
                 <Send className="h-4 w-4" aria-hidden="true" />
               </button>
             </form>
-          </Reveal>
+          </div>
         </div>
       </div>
     </section>

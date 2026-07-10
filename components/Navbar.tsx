@@ -1,6 +1,5 @@
 "use client";
 
-import { motion, useScroll } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
@@ -15,15 +14,16 @@ const navItems = [
 ];
 
 export function Navbar() {
-  const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
   const closeMenu = useCallback(() => setOpen(false), []);
 
   useEffect(() => {
-    return scrollY.on("change", (latest) => setScrolled(latest > 20));
-  }, [scrollY]);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -46,15 +46,12 @@ export function Navbar() {
 
   return (
     <>
-      <motion.header
+      <header
         className={`fixed left-0 right-0 top-0 z-50 transition duration-300 ${
           scrolled || open
-            ? "border-b border-brand/10 bg-white/90 shadow-soft backdrop-blur-xl"
+            ? "border-b border-brand/10 bg-white/90 shadow-sm backdrop-blur-xl"
             : "bg-white/70 backdrop-blur-md lg:bg-transparent lg:backdrop-blur-none"
         }`}
-        initial={{ y: -24, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
       >
         <nav className="container-padded flex h-16 items-center justify-between sm:h-20" aria-label="Navigation principale">
           <a
@@ -87,9 +84,9 @@ export function Navbar() {
           </div>
 
           <a
-            href="#contact"
-            className="hidden min-h-11 items-center rounded-full bg-brand px-5 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(73,90,168,0.22)] transition hover:bg-brand-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand lg:inline-flex"
-            onClick={(event) => onAnchorClick(event, "#contact")}
+            href="#contact-form"
+            className="hidden min-h-11 items-center rounded-full bg-brand px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand lg:inline-flex"
+            onClick={(event) => onAnchorClick(event, "#contact-form")}
           >
             Demander un devis
           </a>
@@ -105,7 +102,7 @@ export function Navbar() {
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </nav>
-      </motion.header>
+      </header>
 
       {open ? (
         <>
@@ -117,7 +114,7 @@ export function Navbar() {
           />
           <div
             id="mobile-menu"
-            className="fixed left-0 right-0 top-16 z-50 max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-brand/10 bg-white shadow-card sm:top-20 sm:max-h-[calc(100dvh-5rem)] lg:hidden"
+            className="fixed left-0 right-0 top-16 z-50 max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-brand/10 bg-white shadow-sm sm:top-20 sm:max-h-[calc(100dvh-5rem)] lg:hidden"
           >
             <div className="container-padded flex flex-col gap-1 py-4">
               {navItems.map((item) => (
@@ -131,9 +128,9 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
-                className="mt-3 rounded-full bg-brand px-5 py-3.5 text-center text-sm font-semibold text-white shadow-[0_8px_24px_rgba(73,90,168,0.22)]"
-                onClick={(event) => onAnchorClick(event, "#contact")}
+                href="#contact-form"
+                className="mt-3 rounded-full bg-brand px-5 py-3.5 text-center text-sm font-semibold text-white shadow-sm"
+                onClick={(event) => onAnchorClick(event, "#contact-form")}
               >
                 Demander un devis
               </a>
