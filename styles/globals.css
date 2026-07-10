@@ -3,9 +3,18 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
-  --background: #050505;
-  --foreground: #f7f7f3;
+  color-scheme: light;
+  --background: #f8f6ef;
+  --foreground: #24304f;
+  --ink-900: #24304f;
+  --ink-700: #3f4f73;
+  --ink-600: #5c6b8f;
+  --accent: #495aa8;
+  --accent-soft: #6a7bd0;
+  --surface-white: #ffffff;
+  --surface-blue: #eef3ff;
+  --surface-card: #fdfefe;
+  --line-soft: rgba(73, 90, 168, 0.16);
   --font-inter: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: Manrope, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -22,8 +31,9 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 30rem),
-    linear-gradient(180deg, #050505 0%, #0b0b0b 42%, #050505 100%);
+    radial-gradient(circle at 8% -12%, rgba(112, 146, 255, 0.18), transparent 36rem),
+    radial-gradient(circle at 92% 8%, rgba(73, 90, 168, 0.1), transparent 30rem),
+    linear-gradient(180deg, #fdfcf8 0%, #f6f9ff 52%, #fbfdff 100%);
   color: var(--foreground);
   font-family: var(--font-inter), Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   text-rendering: optimizeLegibility;
@@ -43,8 +53,8 @@ select {
 }
 
 ::selection {
-  background: rgba(212, 175, 55, 0.32);
-  color: #fff;
+  background: rgba(73, 90, 168, 0.22);
+  color: #24304f;
 }
 
 .container-padded {
@@ -53,34 +63,46 @@ select {
 }
 
 .glass-panel {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
-    rgba(18, 18, 18, 0.78);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(20px);
+  border: 1px solid var(--line-soft);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 246, 255, 0.92));
+  box-shadow: 0 18px 44px rgba(36, 48, 79, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
 }
 
-.gold-text {
-  background: linear-gradient(135deg, #fff7d1 0%, #d4af37 42%, #9d7c20 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.hero-mask {
-  mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+.card-surface {
+  border: 1px solid var(--line-soft);
+  background: var(--surface-card);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(36, 48, 79, 0.06);
 }
 
 .noise {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.18;
+  opacity: 0.06;
   background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(73, 90, 168, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(73, 90, 168, 0.04) 1px, transparent 1px);
   background-size: 56px 56px;
+}
+
+main > section {
+  position: relative;
+}
+
+main > section:nth-of-type(odd) {
+  background: var(--surface-white);
+}
+
+main > section:nth-of-type(even) {
+  background: var(--surface-blue);
+}
+
+footer {
+  background: #f4f7ff;
+  border-top: 1px solid var(--line-soft);
 }
 
 @media (prefers-reduced-motion: reduce) {

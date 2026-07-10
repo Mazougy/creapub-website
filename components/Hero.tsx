@@ -8,7 +8,7 @@ import { LinkButton } from "@/components/ui/Buttons";
 import { company, targetMarkets } from "@/lib/content";
 
 const stats = [
-  { label: "Fondé", value: 2025, prefix: "" },
+  { label: "Fondée", value: 2025, prefix: "" },
   { label: "Services clés", value: 12, suffix: "+" },
   { label: "Secteurs ciblés", value: 7, suffix: "+" },
 ];
@@ -19,7 +19,7 @@ export function Hero() {
   const shapeY = useTransform(scrollY, [0, 700], [0, -90]);
 
   return (
-    <section id="top" className="relative isolate min-h-screen overflow-hidden pt-28 hero-mask">
+    <section id="top" className="relative isolate min-h-screen overflow-hidden pt-28">
       <motion.div className="absolute inset-0 -z-20" style={{ y: imageY }}>
         <Image
           src="/images/hero-industrial.svg"
@@ -27,19 +27,19 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-72"
+          className="object-cover opacity-[0.22]"
         />
       </motion.div>
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_16%,rgba(212,175,55,0.2),transparent_28rem),linear-gradient(90deg,rgba(5,5,5,0.96),rgba(5,5,5,0.74)_48%,rgba(5,5,5,0.42))]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_12%,rgba(110,140,220,0.2),transparent_32rem),radial-gradient(circle_at_12%_88%,rgba(73,90,168,0.1),transparent_28rem),linear-gradient(180deg,#fdfcf8_0%,rgba(238,243,255,0.85)_55%,#ffffff_100%)]" />
       <div className="noise" />
 
       <motion.div
-        className="absolute right-[8%] top-32 hidden h-48 w-48 rounded-lg border border-gold/20 bg-gold/8 backdrop-blur-xl lg:block"
+        className="absolute right-[8%] top-32 hidden h-48 w-48 rounded-3xl border border-brand/15 bg-brand/8 shadow-soft backdrop-blur-xl lg:block"
         style={{ y: shapeY, rotate: 8 }}
         aria-hidden="true"
       />
       <motion.div
-        className="absolute bottom-28 right-[18%] hidden h-24 w-24 rounded-full border border-white/12 bg-white/5 backdrop-blur-lg md:block"
+        className="absolute bottom-28 right-[18%] hidden h-24 w-24 rounded-full border border-brand/12 bg-white/60 shadow-soft backdrop-blur-lg md:block"
         animate={{ y: [0, -14, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         aria-hidden="true"
@@ -52,14 +52,14 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/7 px-4 py-2 text-sm text-white/78 backdrop-blur-xl">
-            <Sparkles className="h-4 w-4 text-gold" aria-hidden="true" />
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white/80 px-4 py-2 text-sm text-navy/70 shadow-soft backdrop-blur-xl">
+            <Sparkles className="h-4 w-4 text-brand" aria-hidden="true" />
             {company.slogan}
           </div>
-          <h1 className="font-display text-5xl font-semibold leading-[0.96] tracking-normal text-white md:text-7xl lg:text-8xl">
+          <h1 className="font-display text-5xl font-semibold leading-[1.02] tracking-tight text-navy md:text-7xl lg:text-8xl">
             Communication visuelle premium pour les marques qui doivent être vues.
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-navy/65 md:text-xl">
             Creapub transforme restaurants, hôtels, usines, cliniques, espaces commerciaux, lancements immobiliers et événements en environnements de marque visibles et mémorables.
           </p>
 
@@ -72,11 +72,11 @@ export function Hero() {
             </LinkButton>
           </div>
 
-            <div className="mt-10 flex flex-wrap gap-2" aria-label="Marchés cibles">
+          <div className="mt-10 flex flex-wrap gap-2" aria-label="Marchés cibles">
             {targetMarkets.map((market) => (
               <span
                 key={market}
-                className="rounded-full border border-white/10 bg-white/6 px-3 py-1.5 text-xs font-medium text-white/64"
+                className="rounded-full border border-brand/12 bg-white/70 px-3 py-1.5 text-xs font-medium text-navy/60 shadow-sm backdrop-blur-sm"
               >
                 {market}
               </span>
@@ -85,18 +85,23 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          className="glass-panel mt-14 grid gap-6 rounded-lg p-5 md:grid-cols-3 md:p-6"
+          className="glass-panel mt-14 grid gap-4 rounded-3xl p-5 sm:grid-cols-2 md:gap-6 md:p-6 lg:grid-cols-3"
           initial={{ opacity: 0, y: 26 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.28, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          {stats.map((stat) => (
-            <div key={stat.label} className="border-white/10 md:border-r md:last:border-r-0">
-              <p className="font-display text-3xl font-semibold text-white md:text-4xl">
+          {stats.map((stat, index) => (
+            <div
+              key={stat.label}
+              className={`border-brand/10 pb-4 last:pb-0 sm:pb-0 ${
+                index < stats.length - 1 ? "border-b lg:border-b-0 lg:border-r lg:last:border-r-0" : ""
+              }`}
+            >
+              <p className="font-display text-3xl font-semibold text-navy md:text-4xl">
                 <AnimatedNumber value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
               </p>
-              <p className="mt-2 flex items-center gap-2 text-sm text-white/55">
-                <ShieldCheck className="h-4 w-4 text-gold" aria-hidden="true" />
+              <p className="mt-2 flex items-center gap-2 text-sm text-navy/60">
+                <ShieldCheck className="h-4 w-4 text-brand" aria-hidden="true" />
                 {stat.label}
               </p>
             </div>
@@ -106,7 +111,7 @@ export function Hero() {
 
       <a
         href="#services"
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-sm text-white/50 transition hover:text-white md:flex"
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-sm text-navy/45 transition hover:text-brand md:flex"
         aria-label="Scroll to services"
       >
         <ArrowDown className="h-4 w-4" aria-hidden="true" />

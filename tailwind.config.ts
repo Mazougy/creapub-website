@@ -9,29 +9,40 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gold: {
-          DEFAULT: "#D4AF37",
-          muted: "#A8862E",
-          soft: "#F3D978",
+        brand: {
+          DEFAULT: "#495AA8",
+          hover: "#3E4E95",
+          soft: "#6A7BD0",
+          muted: "#C9D4F2",
+          line: "rgba(73, 90, 168, 0.16)",
         },
-        ink: {
-          DEFAULT: "#050505",
-          soft: "#101010",
-          panel: "#171717",
-          line: "#292929",
+        navy: {
+          DEFAULT: "#24304F",
+          soft: "#3F4F73",
+          muted: "#5C6B8F",
+        },
+        surface: {
+          white: "#FFFFFF",
+          blue: "#EEF3FF",
+          cream: "#F8F6EF",
+          card: "#FDFEFE",
         },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "ui-sans-serif", "system-ui"],
-        display: ["var(--font-display)", "Inter", "ui-sans-serif", "system-ui"],
+        display: ["var(--font-display)", "Manrope", "Inter", "ui-sans-serif", "system-ui"],
+      },
+      borderRadius: {
+        card: "24px",
       },
       boxShadow: {
-        premium: "0 24px 80px rgba(0,0,0,0.42)",
-        gold: "0 18px 50px rgba(212,175,55,0.18)",
+        soft: "0 8px 32px rgba(36, 48, 79, 0.08)",
+        card: "0 16px 40px rgba(73, 90, 168, 0.12)",
+        premium: "0 24px 60px rgba(36, 48, 79, 0.1)",
       },
       backgroundImage: {
-        "gold-line":
-          "linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,0.75), rgba(212,175,55,0))",
+        "brand-line":
+          "linear-gradient(90deg, rgba(73,90,168,0), rgba(73,90,168,0.45), rgba(73,90,168,0))",
       },
     },
   },

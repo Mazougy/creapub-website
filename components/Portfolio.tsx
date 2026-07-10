@@ -9,16 +9,17 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { portfolioItems } from "@/lib/content";
 
 const filters = ["Tous", "Restaurants", "Hôtels", "Usines", "Commerce de détail", "Cliniques", "Immobilier"];
+const ALL_FILTER = "Tous";
 
 export function Portfolio() {
-  const [active, setActive] = useState("All");
+  const [active, setActive] = useState(ALL_FILTER);
   const visibleItems = useMemo(
-    () => (active === "All" ? portfolioItems : portfolioItems.filter((item) => item.category === active)),
+    () => (active === ALL_FILTER ? portfolioItems : portfolioItems.filter((item) => item.category === active)),
     [active],
   );
 
   return (
-    <section id="portfolio" className="bg-black py-24 md:py-32">
+    <section id="portfolio" className="py-24 md:py-32">
       <div className="container-padded">
         <SectionHeader
           eyebrow="Portfolio"
@@ -32,10 +33,10 @@ export function Portfolio() {
               key={filter}
               type="button"
               onClick={() => setActive(filter)}
-              className={`min-h-10 rounded-full border px-4 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold ${
+              className={`min-h-10 rounded-full border px-4 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand ${
                 active === filter
-                  ? "border-gold bg-gold text-black"
-                  : "border-white/12 bg-white/[0.035] text-white/68 hover:border-gold/50 hover:text-white"
+                  ? "border-brand bg-brand text-white shadow-[0_8px_20px_rgba(73,90,168,0.2)]"
+                  : "border-brand/15 bg-white text-navy/65 hover:border-brand/35 hover:text-navy"
               }`}
               aria-pressed={active === filter}
             >
@@ -44,13 +45,13 @@ export function Portfolio() {
           ))}
         </Reveal>
 
-        <motion.div layout className="columns-1 gap-5 md:columns-2 lg:columns-3">
+        <motion.div layout className="columns-1 gap-5 lg:columns-2 xl:columns-3">
           <AnimatePresence mode="popLayout">
             {visibleItems.map((item, index) => (
               <motion.article
                 layout
                 key={item.title}
-                className={`mb-5 break-inside-avoid overflow-hidden rounded-lg border border-white/10 bg-ink-panel ${
+                className={`mb-5 break-inside-avoid overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-soft ${
                   index % 3 === 0 ? "md:[&_.project-image]:aspect-[4/5]" : ""
                 }`}
                 initial={{ opacity: 0, y: 24 }}
@@ -67,18 +68,18 @@ export function Portfolio() {
                     className="object-cover transition duration-500 hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-x-4 top-4 flex justify-between text-xs font-semibold uppercase tracking-[0.14em] text-white/78">
-                    <span className="rounded-full bg-black/55 px-3 py-1 backdrop-blur">Avant</span>
-                    <span className="rounded-full bg-gold px-3 py-1 text-black">Après</span>
+                  <div className="absolute inset-x-4 top-4 flex justify-between text-xs font-semibold uppercase tracking-[0.14em]">
+                    <span className="rounded-full bg-white/85 px-3 py-1 text-navy/70 backdrop-blur">Avant</span>
+                    <span className="rounded-full bg-brand px-3 py-1 text-white">Après</span>
                   </div>
                 </div>
                 <div className="p-5">
-                  <p className="text-sm font-semibold text-gold">{item.category}</p>
+                  <p className="text-sm font-semibold text-brand">{item.category}</p>
                   <div className="mt-2 flex items-start justify-between gap-4">
-                    <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-                    <ArrowUpRight className="h-5 w-5 shrink-0 text-white/38" aria-hidden="true" />
+                    <h3 className="text-xl font-semibold text-navy">{item.title}</h3>
+                    <ArrowUpRight className="h-5 w-5 shrink-0 text-navy/30" aria-hidden="true" />
                   </div>
-                  <p className="mt-4 leading-7 text-white/58">{item.result}</p>
+                  <p className="mt-4 leading-7 text-navy/55">{item.result}</p>
                 </div>
               </motion.article>
             ))}

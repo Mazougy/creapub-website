@@ -26,14 +26,14 @@ export function SectionHeader({
           : "mb-10 max-w-3xl md:mb-14"
       }
     >
-      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-gold">
+      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand">
         {eyebrow}
       </p>
-      <h2 className="font-display text-3xl font-semibold tracking-normal text-white md:text-5xl">
+      <h2 className="font-display text-3xl font-semibold tracking-tight text-navy md:text-5xl">
         {title}
       </h2>
       {description ? (
-        <p className="mt-5 text-base leading-8 text-white/66 md:text-lg">
+        <p className="mt-5 text-base leading-8 text-navy/60 md:text-lg">
           {description}
         </p>
       ) : null}

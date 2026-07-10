@@ -1,7 +1,7 @@
 "use client";
 
-import { animate, motion, useInView, useMotionValue, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { animate, useInView, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 type AnimatedNumberProps = {
   value: number;
@@ -12,14 +12,38 @@ type AnimatedNumberProps = {
 export function AnimatedNumber({ value, suffix = "", prefix = "" }: AnimatedNumberProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, (latest) => `${prefix}${Math.round(latest)}${suffix}`);
+  const reducedMotion = useReducedMotion();
+  const finalValue = `${prefix}${value}${suffix}`;
+  const [displayValue, setDisplayValue] = useState(`${prefix}0${suffix}`);
 
   useEffect(() => {
-    if (!inView) return;
-    const controls = animate(count, value, { duration: 1.4, ease: "easeOut" });
-    return () => controls.stop();
-  }, [count, inView, value]);
+    if (displayValue === finalValue) return;
 
-  return <motion.span ref={ref}>{rounded}</motion.span>;
+    if (reducedMotion) {
+      setDisplayValue(finalValue);
+      return;
+    }
+
+    if (!inView) {
+      const fallbackId = window.setTimeout(() => {
+        setDisplayValue(finalValue);
+      }, 1200);
+      return () => window.clearTimeout(fallbackId);
+    }
+
+    const controls = animate(0, value, {
+      duration: 1.4,
+      ease: "easeOut",
+      onUpdate: (latest) => {
+        setDisplayValue(`${prefix}${Math.round(latest)}${suffix}`);
+      },
+      onComplete: () => {
+        setDisplayValue(finalValue);
+      },
+    });
+
+    return () => controls.stop();
+  }, [displayValue, finalValue, inView, prefix, reducedMotion, suffix, value]);
+
+  return <span ref={ref}>{displayValue}</span>;
 }

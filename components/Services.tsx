@@ -29,7 +29,7 @@ const icons = {
 
 export function Services() {
   return (
-    <section id="services" className="bg-ink py-24 md:py-32">
+    <section id="services" className="py-24 md:py-32">
       <div className="container-padded">
         <SectionHeader
           eyebrow="Compétences"
@@ -52,17 +52,17 @@ export function Services() {
             return (
               <motion.article
                 key={service.title}
-                className="group rounded-lg border border-white/9 bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-gold/42 hover:bg-white/[0.055] hover:shadow-premium"
+                className="group rounded-3xl border border-brand/12 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-brand/25 hover:shadow-card"
                 variants={{
                   hidden: { opacity: 0, y: 24 },
                   visible: { opacity: 1, y: 0, transition: { duration: 0.55 } },
                 }}
               >
-                <div className="mb-6 grid h-12 w-12 place-items-center rounded-lg border border-gold/24 bg-gold/10 text-gold transition group-hover:bg-gold group-hover:text-black">
+                <div className="mb-6 grid h-12 w-12 place-items-center rounded-2xl border border-brand/20 bg-brand/8 text-brand transition group-hover:bg-brand group-hover:text-white">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                <p className="mt-4 leading-7 text-white/58">{service.description}</p>
+                <h3 className="text-xl font-semibold text-navy">{service.title}</h3>
+                <p className="mt-4 leading-7 text-navy/55">{service.description}</p>
               </motion.article>
             );
           })}

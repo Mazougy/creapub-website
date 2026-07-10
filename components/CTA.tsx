@@ -5,17 +5,17 @@ import { company } from "@/lib/content";
 
 export function CTA() {
   return (
-    <section className="bg-black py-20">
+    <section className="py-20">
       <div className="container-padded">
         <Reveal>
-          <div className="relative overflow-hidden rounded-lg border border-gold/28 bg-[linear-gradient(135deg,rgba(212,175,55,0.16),rgba(255,255,255,0.04)_36%,rgba(0,0,0,0.7))] p-8 shadow-gold md:p-12">
-            <div className="absolute -right-16 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full border border-gold/18" aria-hidden="true" />
+          <div className="relative overflow-hidden rounded-3xl border border-brand/15 bg-[linear-gradient(135deg,rgba(238,243,255,0.95),rgba(255,255,255,0.98)_45%,rgba(241,246,255,0.9))] p-8 shadow-card md:p-12">
+            <div className="absolute -right-16 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full border border-brand/12 bg-brand/5" aria-hidden="true" />
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
-                <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-gold">
+                <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand">
                   Prêts pour la visibilité
                 </p>
-                <h2 className="max-w-3xl font-display text-3xl font-semibold tracking-normal text-white md:text-5xl">
+                <h2 className="max-w-3xl font-display text-3xl font-semibold tracking-tight text-navy md:text-5xl">
                   Transformez votre prochain emplacement, lancement ou flotte en un actif de marque premium.
                 </h2>
               </div>
@@ -28,7 +28,7 @@ export function CTA() {
                 </LinkButton>
                 <a
                   href={`tel:${company.phone.replace(/\s/g, "")}`}
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/12 px-5 text-sm font-semibold text-white/78 transition hover:border-gold/60 hover:text-gold"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-brand/15 px-5 text-sm font-semibold text-navy/70 transition hover:border-brand/40 hover:text-brand"
                   aria-label="Appeler Creapub"
                 >
                   <Phone className="h-4 w-4" aria-hidden="true" />
@@ -42,7 +42,7 @@ export function CTA() {
 
       <a
         href={company.whatsapp}
-        className="fixed bottom-5 right-5 z-40 hidden min-h-12 items-center gap-2 rounded-full bg-gold px-5 text-sm font-semibold text-black shadow-gold transition hover:-translate-y-0.5 hover:bg-gold-soft md:inline-flex"
+        className="fixed bottom-5 right-5 z-40 hidden min-h-12 items-center gap-2 rounded-full bg-brand px-5 text-sm font-semibold text-white shadow-[0_12px_28px_rgba(73,90,168,0.28)] transition hover:-translate-y-0.5 hover:bg-brand-hover md:inline-flex"
         aria-label="Floating WhatsApp contact button"
       >
         <MessageCircle className="h-4 w-4" aria-hidden="true" />

@@ -26,7 +26,7 @@ export function Navbar() {
     <motion.header
       className={`fixed left-0 right-0 top-0 z-50 transition duration-300 ${
         scrolled
-          ? "border-b border-white/10 bg-black/68 shadow-2xl backdrop-blur-xl"
+          ? "border-b border-brand/10 bg-white/85 shadow-soft backdrop-blur-xl"
           : "bg-transparent"
       }`}
       initial={{ y: -24, opacity: 0 }}
@@ -50,7 +50,7 @@ export function Navbar() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-white/68 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+              className="text-sm font-medium text-navy/65 transition hover:text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
             >
               {item.label}
             </a>
@@ -59,14 +59,14 @@ export function Navbar() {
 
         <a
           href="#contact"
-          className="hidden min-h-11 items-center rounded-full border border-gold/40 bg-gold/12 px-5 text-sm font-semibold text-gold transition hover:bg-gold hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold lg:inline-flex"
+          className="hidden min-h-11 items-center rounded-full bg-brand px-5 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(73,90,168,0.22)] transition hover:bg-brand-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand lg:inline-flex"
         >
           Demander un devis
         </a>
 
         <button
           type="button"
-          className="grid h-11 w-11 place-items-center rounded-lg border border-white/12 text-white lg:hidden"
+          className="grid h-11 w-11 place-items-center rounded-2xl border border-brand/15 text-navy lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
           aria-controls="mobile-menu"
@@ -77,13 +77,13 @@ export function Navbar() {
       </nav>
 
       {open ? (
-        <div id="mobile-menu" className="border-t border-white/10 bg-black/92 px-4 py-5 backdrop-blur-xl lg:hidden">
+        <div id="mobile-menu" className="border-t border-brand/10 bg-white/95 px-4 py-5 backdrop-blur-xl lg:hidden">
           <div className="container-padded flex flex-col gap-2">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-lg px-3 py-3 text-base font-medium text-white/78 transition hover:bg-white/8 hover:text-white"
+                className="rounded-2xl px-3 py-3 text-base font-medium text-navy/75 transition hover:bg-surface-blue hover:text-navy"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -91,7 +91,7 @@ export function Navbar() {
             ))}
             <a
               href="#contact"
-              className="mt-2 rounded-full bg-gold px-5 py-3 text-center text-sm font-semibold text-black"
+              className="mt-2 rounded-full bg-brand px-5 py-3 text-center text-sm font-semibold text-white"
               onClick={() => setOpen(false)}
             >
               Demander un devis

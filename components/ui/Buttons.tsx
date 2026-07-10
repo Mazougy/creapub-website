@@ -25,11 +25,11 @@ export function LinkButton({
   const Icon = iconMap[icon];
   const styles = {
     primary:
-      "bg-gold text-black shadow-gold hover:bg-gold-soft focus-visible:outline-gold",
+      "bg-brand text-white shadow-[0_12px_28px_rgba(73,90,168,0.24)] hover:bg-brand-hover focus-visible:outline-brand",
     secondary:
-      "border border-white/12 bg-white/7 text-white hover:border-gold/70 hover:text-gold focus-visible:outline-white",
+      "border border-brand-muted bg-white text-navy hover:border-brand hover:text-brand focus-visible:outline-brand",
     ghost:
-      "bg-transparent text-white/78 hover:text-white focus-visible:outline-white",
+      "bg-transparent text-navy-soft hover:text-navy focus-visible:outline-brand",
   };
 
   return (

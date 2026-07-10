@@ -7,7 +7,7 @@ import { company, products } from "@/lib/content";
 
 export function Products() {
   return (
-    <section id="products" className="bg-black py-24 md:py-32">
+    <section id="products" className="py-24 md:py-32">
       <div className="container-padded">
         <SectionHeader
           eyebrow="Produits"
@@ -18,8 +18,8 @@ export function Products() {
         <div className="grid gap-5 lg:grid-cols-4">
           {products.map((product, index) => (
             <Reveal key={product.name} delay={index * 0.04}>
-                <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-ink-panel transition duration-300 md:hover:-translate-y-1 md:hover:border-gold/45 md:hover:shadow-gold min-h-[480px]">
-                <div className="relative aspect-[4/3] overflow-hidden bg-white/[0.03]">
+              <article className="group flex h-full min-h-[480px] flex-col overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-soft transition duration-300 md:hover:-translate-y-1 md:hover:border-brand/25 md:hover:shadow-card">
+                <div className="relative aspect-[4/3] overflow-hidden bg-surface-blue">
                   <Image
                     src={product.image}
                     alt={`${product.name} visual placeholder`}
@@ -28,45 +28,45 @@ export function Products() {
                     className="object-cover transition duration-500 md:group-hover:scale-105"
                     loading="lazy"
                   />
-                  <span className="absolute left-4 top-4 rounded-full border border-gold/40 bg-black/60 px-3 py-1 text-xs font-semibold text-gold backdrop-blur">
+                  <span className="absolute left-4 top-4 rounded-full border border-brand/20 bg-white/90 px-3 py-1 text-xs font-semibold text-brand backdrop-blur">
                     {product.badge}
                   </span>
                 </div>
 
                 <div className="flex flex-1 flex-col p-5">
                   <div>
-                    <h3 className="text-xl font-semibold text-white">{product.name}</h3>
-                    <p className="mt-3 text-sm leading-6 text-white/58">{product.material}</p>
+                    <h3 className="text-xl font-semibold text-navy">{product.name}</h3>
+                    <p className="mt-3 text-sm leading-6 text-navy/55">{product.material}</p>
 
-                    <dl className="mt-5 grid gap-3 text-sm text-white/66">
-                    <div className="flex gap-2">
-                      <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
-                      <div>
-                        <dt className="sr-only">Environment</dt>
-                        <dd>{product.environment}</dd>
+                    <dl className="mt-5 grid gap-3 text-sm text-navy/65">
+                      <div className="flex gap-2">
+                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
+                        <div>
+                          <dt className="sr-only">Environment</dt>
+                          <dd>{product.environment}</dd>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex gap-2">
-                      <Maximize2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
-                      <div>
-                        <dt className="sr-only">Sizes</dt>
-                        <dd>{product.sizes}</dd>
+                      <div className="flex gap-2">
+                        <Maximize2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
+                        <div>
+                          <dt className="sr-only">Sizes</dt>
+                          <dd>{product.sizes}</dd>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex gap-2">
-                      <Clock className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
-                      <div>
-                        <dt className="sr-only">Production time</dt>
-                        <dd>{product.production}</dd>
+                      <div className="flex gap-2">
+                        <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
+                        <div>
+                          <dt className="sr-only">Production time</dt>
+                          <dd>{product.production}</dd>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex gap-2">
-                      <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
-                      <div>
-                        <dt className="sr-only">Price</dt>
-                        <dd>{product.price}</dd>
+                      <div className="flex gap-2">
+                        <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
+                        <div>
+                          <dt className="sr-only">Price</dt>
+                          <dd>{product.price}</dd>
+                        </div>
                       </div>
-                    </div>
                     </dl>
                   </div>
 
@@ -76,7 +76,7 @@ export function Products() {
                     </LinkButton>
                     <a
                       href={company.whatsapp}
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/12 text-sm font-semibold text-white/78 transition hover:border-gold/50 hover:text-gold py-3"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-brand/15 py-3 text-sm font-semibold text-navy/70 transition hover:border-brand/40 hover:text-brand"
                       aria-label={`Ask about ${product.name} on WhatsApp`}
                     >
                       <MessageCircle className="h-4 w-4" aria-hidden="true" />
