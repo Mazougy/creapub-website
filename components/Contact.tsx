@@ -7,7 +7,7 @@ import { company } from "@/lib/content";
 
 export function Contact() {
   return (
-    <section id="contact" className="py-24 md:py-32">
+    <section id="contact" className="py-16 md:py-24 lg:py-32">
       <div className="container-padded">
         <SectionHeader
           eyebrow="Contact"
@@ -129,7 +129,7 @@ export function Contact() {
                     name="name"
                     type="text"
                     autoComplete="name"
-                    className="min-h-12 rounded-2xl border border-brand/15 bg-white px-4 text-navy outline-none transition placeholder:text-navy/30 focus:border-brand"
+                    className="min-h-12 rounded-2xl border border-brand/15 bg-white px-4 text-base text-navy outline-none transition placeholder:text-navy/30 focus:border-brand"
                     placeholder="Your full name"
                     required
                   />
@@ -140,7 +140,7 @@ export function Contact() {
                     name="company"
                     type="text"
                     autoComplete="organization"
-                    className="min-h-12 rounded-2xl border border-brand/15 bg-white px-4 text-navy outline-none transition placeholder:text-navy/30 focus:border-brand"
+                    className="min-h-12 rounded-2xl border border-brand/15 bg-white px-4 text-base text-navy outline-none transition placeholder:text-navy/30 focus:border-brand"
                     placeholder="Business name"
                   />
                 </label>
@@ -150,7 +150,7 @@ export function Contact() {
                     name="email"
                     type="email"
                     autoComplete="email"
-                    className="min-h-12 rounded-2xl border border-brand/15 bg-white px-4 text-navy outline-none transition placeholder:text-navy/30 focus:border-brand"
+                    className="min-h-12 rounded-2xl border border-brand/15 bg-white px-4 text-base text-navy outline-none transition placeholder:text-navy/30 focus:border-brand"
                     placeholder="you@company.com"
                     required
                   />
@@ -161,7 +161,7 @@ export function Contact() {
                     name="phone"
                     type="tel"
                     autoComplete="tel"
-                    className="min-h-12 rounded-2xl border border-brand/15 bg-white px-4 text-navy outline-none transition placeholder:text-navy/30 focus:border-brand"
+                    className="min-h-12 rounded-2xl border border-brand/15 bg-white px-4 text-base text-navy outline-none transition placeholder:text-navy/30 focus:border-brand"
                     placeholder="+216 ..."
                   />
                 </label>
@@ -171,7 +171,7 @@ export function Contact() {
                 Type de projet
                 <select
                   name="projectType"
-                  className="mb-4 min-h-12 rounded-2xl border border-brand/15 bg-white px-4 text-navy outline-none transition focus:border-brand"
+                  className="mb-4 min-h-12 rounded-2xl border border-brand/15 bg-white px-4 text-base text-navy outline-none transition focus:border-brand"
                   defaultValue=""
                   required
                 >
@@ -192,7 +192,7 @@ export function Contact() {
                 <textarea
                   name="message"
                   rows={6}
-                  className="resize-y rounded-2xl border border-brand/15 bg-white px-4 py-3 text-navy outline-none transition placeholder:text-navy/30 focus:border-brand"
+                  className="resize-y rounded-2xl border border-brand/15 bg-white px-4 py-3 text-base text-navy outline-none transition placeholder:text-navy/30 focus:border-brand"
                   placeholder="Parlez-nous de l'emplacement, du calendrier, des tailles, matériaux ou objectif de visibilité."
                   required
                 />

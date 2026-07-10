@@ -15,10 +15,10 @@ export function Products() {
           description="Des fiches produits claires aident les équipes à comparer matériaux, délais et cas d'usage avant de demander un devis précis."
         />
 
-        <div className="grid gap-5 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product, index) => (
             <Reveal key={product.name} delay={index * 0.04}>
-              <article className="group flex h-full min-h-[480px] flex-col overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-soft transition duration-300 md:hover:-translate-y-1 md:hover:border-brand/25 md:hover:shadow-card">
+              <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-soft transition duration-300 md:hover:-translate-y-1 md:hover:border-brand/25 md:hover:shadow-card">
                 <div className="relative aspect-[4/3] overflow-hidden bg-surface-blue">
                   <Image
                     src={product.image}

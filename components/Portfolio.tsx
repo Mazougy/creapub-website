@@ -27,13 +27,13 @@ export function Portfolio() {
           description="Chaque projet équilibre l'impact de la marque, la réalité du site, le comportement des matériaux et le flux client."
         />
 
-        <Reveal className="mb-9 flex flex-wrap justify-center gap-2" aria-label="Filtres de catégorie du portfolio">
+        <Reveal className="mb-9 -mx-1 flex gap-2 overflow-x-auto px-1 pb-2 sm:flex-wrap sm:justify-center sm:overflow-visible sm:pb-0" aria-label="Filtres de catégorie du portfolio">
           {filters.map((filter) => (
             <button
               key={filter}
               type="button"
               onClick={() => setActive(filter)}
-              className={`min-h-10 rounded-full border px-4 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand ${
+              className={`shrink-0 min-h-10 rounded-full border px-4 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand ${
                 active === filter
                   ? "border-brand bg-brand text-white shadow-[0_8px_20px_rgba(73,90,168,0.2)]"
                   : "border-brand/15 bg-white text-navy/65 hover:border-brand/35 hover:text-navy"

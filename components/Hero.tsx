@@ -8,7 +8,7 @@ import { LinkButton } from "@/components/ui/Buttons";
 import { company, targetMarkets } from "@/lib/content";
 
 const stats = [
-  { label: "Fondée", value: 2025, prefix: "" },
+  { label: "Fondée", value: parseInt(company.founded), prefix: "" },
   { label: "Services clés", value: 12, suffix: "+" },
   { label: "Secteurs ciblés", value: 7, suffix: "+" },
 ];
@@ -19,7 +19,7 @@ export function Hero() {
   const shapeY = useTransform(scrollY, [0, 700], [0, -90]);
 
   return (
-    <section id="top" className="relative isolate min-h-screen overflow-hidden pt-28">
+    <section id="top" className="relative isolate min-h-[100dvh] overflow-hidden pt-24 sm:pt-28">
       <motion.div className="absolute inset-0 -z-20" style={{ y: imageY }}>
         <Image
           src="/images/hero-industrial.svg"
@@ -45,7 +45,7 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div className="container-padded relative grid min-h-[calc(100vh-7rem)] items-center py-20">
+      <div className="container-padded relative grid min-h-[calc(100dvh-6rem)] items-center py-12 sm:min-h-[calc(100dvh-7rem)] sm:py-20">
         <motion.div
           className="max-w-4xl"
           initial={{ opacity: 0, y: 34 }}
@@ -56,10 +56,10 @@ export function Hero() {
             <Sparkles className="h-4 w-4 text-brand" aria-hidden="true" />
             {company.slogan}
           </div>
-          <h1 className="font-display text-5xl font-semibold leading-[1.02] tracking-tight text-navy md:text-7xl lg:text-8xl">
+          <h1 className="font-display text-[2rem] font-semibold leading-[1.08] tracking-tight text-navy sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl">
             Communication visuelle premium pour les marques qui doivent être vues.
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-navy/65 md:text-xl">
+          <p className="mt-5 max-w-2xl text-base leading-7 text-navy/65 sm:mt-7 sm:text-lg sm:leading-8 md:text-xl">
             Creapub transforme restaurants, hôtels, usines, cliniques, espaces commerciaux, lancements immobiliers et événements en environnements de marque visibles et mémorables.
           </p>
 

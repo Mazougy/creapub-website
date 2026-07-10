@@ -11,10 +11,10 @@ type AnimatedNumberProps = {
 
 export function AnimatedNumber({ value, suffix = "", prefix = "" }: AnimatedNumberProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
+  const inView = useInView(ref, { once: true, margin: "-80px" });
   const reducedMotion = useReducedMotion();
   const finalValue = `${prefix}${value}${suffix}`;
-  const [displayValue, setDisplayValue] = useState(`${prefix}0${suffix}`);
+  const [displayValue, setDisplayValue] = useState(finalValue);
 
   useEffect(() => {
     if (displayValue === finalValue) return;
@@ -27,12 +27,12 @@ export function AnimatedNumber({ value, suffix = "", prefix = "" }: AnimatedNumb
     if (!inView) {
       const fallbackId = window.setTimeout(() => {
         setDisplayValue(finalValue);
-      }, 1200);
+      }, 300);
       return () => window.clearTimeout(fallbackId);
     }
 
     const controls = animate(0, value, {
-      duration: 1.4,
+      duration: 1.2,
       ease: "easeOut",
       onUpdate: (latest) => {
         setDisplayValue(`${prefix}${Math.round(latest)}${suffix}`);

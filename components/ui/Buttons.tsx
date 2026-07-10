@@ -1,5 +1,8 @@
+"use client";
+
 import { ArrowRight, MessageCircle, Phone } from "lucide-react";
-import type { AnchorHTMLAttributes, ReactNode } from "react";
+import type { AnchorHTMLAttributes, MouseEvent, ReactNode } from "react";
+import { handleAnchorClick } from "@/lib/scroll";
 
 type ButtonVariant = "primary" | "secondary" | "ghost";
 
@@ -20,6 +23,8 @@ export function LinkButton({
   variant = "primary",
   icon = "arrow",
   className = "",
+  href = "",
+  onClick,
   ...props
 }: LinkButtonProps) {
   const Icon = iconMap[icon];
@@ -32,8 +37,17 @@ export function LinkButton({
       "bg-transparent text-navy-soft hover:text-navy focus-visible:outline-brand",
   };
 
+  const onLinkClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    onClick?.(event);
+    if (!event.defaultPrevented && href.startsWith("#")) {
+      handleAnchorClick(event, href);
+    }
+  };
+
   return (
     <a
+      href={href}
+      onClick={onLinkClick}
       className={`group inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 ${styles[variant]} ${className}`}
       {...props}
     >

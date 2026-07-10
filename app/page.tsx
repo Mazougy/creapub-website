@@ -10,6 +10,7 @@ import { Process } from "@/components/Process";
 import { Products } from "@/components/Products";
 import { Services } from "@/components/Services";
 import { Testimonials } from "@/components/Testimonials";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -43,7 +44,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <Navbar />
-      <main>
+      <main className="pb-24 md:pb-0">
         <Hero />
         <Services />
         <Products />
@@ -56,6 +57,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 }

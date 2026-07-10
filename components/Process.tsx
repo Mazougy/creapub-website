@@ -56,7 +56,7 @@ export function Process() {
                   viewport={{ once: true, margin: "-90px" }}
                   transition={{ duration: 0.55, delay: index * 0.03 }}
                 >
-                  <div className="relative z-10 grid h-12 w-12 place-items-center rounded-2xl border border-brand/30 bg-white text-brand shadow-soft md:mx-auto lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+                  <div className="relative z-10 grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-brand/30 bg-white text-brand shadow-soft md:mx-auto lg:absolute lg:left-1/2 lg:-translate-x-1/2">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <div className="rounded-3xl border border-brand/12 bg-white p-6 shadow-soft lg:w-[calc(50%-3rem)]">

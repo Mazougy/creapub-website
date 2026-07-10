@@ -25,11 +25,13 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 8% -12%, rgba(112, 146, 255, 0.18), transparent 36rem),
     radial-gradient(circle at 92% 8%, rgba(73, 90, 168, 0.1), transparent 30rem),
@@ -58,8 +60,14 @@ select {
 }
 
 .container-padded {
-  width: min(100% - 2rem, 1180px);
+  width: min(100% - 1.5rem, 1180px);
   margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .container-padded {
+    width: min(100% - 2rem, 1180px);
+  }
 }
 
 .glass-panel {
@@ -90,6 +98,7 @@ select {
 
 main > section {
   position: relative;
+  scroll-margin-top: 5.5rem;
 }
 
 main > section:nth-of-type(odd) {

@@ -17,8 +17,8 @@ export function Founders() {
         <div className="grid gap-5 md:grid-cols-2">
           {founders.map((founder, index) => (
             <Reveal key={founder.name} delay={index * 0.06}>
-              <article className="grid min-h-[360px] overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-soft md:min-h-[420px] md:grid-cols-[0.9fr_1.1fr]">
-                <div className="relative min-h-72 bg-surface-blue md:min-h-96">
+              <article className="grid overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-soft md:grid-cols-[0.9fr_1.1fr]">
+                <div className="relative min-h-56 bg-surface-blue sm:min-h-72 md:min-h-96">
                   <Image
                     src={founder.image}
                     alt={`${founder.name} profile placeholder`}
@@ -28,7 +28,7 @@ export function Founders() {
                     loading="lazy"
                   />
                 </div>
-                <div className="flex flex-col justify-between p-7">
+                <div className="flex flex-col justify-between p-5 sm:p-7">
                   <div>
                     <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand">
                       {founder.role}
