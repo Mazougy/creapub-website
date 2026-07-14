@@ -37,7 +37,7 @@ export function Products() {
               key={product.name}
               className="group flex h-full flex-col overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand/25 hover:shadow-md"
             >
-              <div className="group/image relative aspect-[5/4] overflow-hidden bg-surface-blue">
+              <div className="group/image relative aspect-[7/10] overflow-hidden bg-surface-blue">
                 <Image
                   src={product.image}
                   alt={`${product.name} visual placeholder`}
@@ -132,7 +132,7 @@ export function Products() {
               <X className="h-5 w-5" aria-hidden="true" />
             </button>
 
-            <div className="relative h-[88vh] w-full overflow-hidden bg-transparent">
+            <div className="relative mx-auto h-[88vh] max-w-full aspect-[7/10] overflow-hidden bg-transparent">
               <Image
                 src={selectedProduct.image}
                 alt={`${selectedProduct.name} enlarged view`}
