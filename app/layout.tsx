@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Inter, Manrope } from "next/font/google";
+import { Toaster } from "sonner";
 import "../styles/globals.css";
 
 const inter = Inter({
@@ -80,6 +81,17 @@ export default function RootLayout({
     <html lang="fr" className={`${inter.variable} ${manrope.variable}`}>
       <body>
         {children}
+        <Toaster
+          position="top-center"
+          richColors
+          closeButton
+          toastOptions={{
+            style: {
+              borderRadius: "16px",
+              fontFamily: "var(--font-inter)",
+            },
+          }}
+        />
         <Analytics />
       </body>
     </html>

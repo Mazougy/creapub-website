@@ -1,77 +1,142 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowDown, Sparkles } from "lucide-react";
+import { ArrowDown, Megaphone, Sparkles, Target, Wand2 } from "lucide-react";
 import { LinkButton } from "@/components/ui/Buttons";
-import { company, targetMarkets } from "@/lib/content";
+import { company } from "@/lib/content";
 
 const stats = [
   { label: "Fondée", value: parseInt(company.founded), prefix: "" },
   { label: "Services clés", value: 12, suffix: "+" },
-  { label: "Secteurs ciblés", value: 7, suffix: "+" },
+  { label: "Solutions publicitaires", value: 7, suffix: "+" },
 ];
+
+const highlights = [
+  {
+    icon: Megaphone,
+    title: "Produits publicitaires de qualité",
+    detail:
+      "Panneaux A-frame portables, mascottes gonflables, panneaux LED et bien plus.",
+  },
+  {
+    icon: Target,
+    title: "Impossible à ignorer",
+    detail:
+      "Chaque produit est conçu pour attirer l'attention et stimuler vos ventes.",
+  },
+  {
+    icon: Wand2,
+    title: "Créativité sur mesure",
+    detail:
+      "Une équipe dédiée transforme vos idées en solutions personnalisées.",
+  },
+];
+
 
 export function Hero() {
   return (
-    <section id="top" className="relative isolate min-h-[100dvh] overflow-hidden pt-24 sm:pt-28">
+    <section
+      id="top"
+      className="relative isolate min-h-screen overflow-hidden pt-24"
+    >
+      {/* Background */}
       <div className="absolute inset-0 -z-20">
         <Image
-          src="/images/hero-industrial.svg"
-          alt="Premium industrial signage production environment with illuminated brand elements"
+          src="/images/creapub-hero-bg.jpg"
+          alt="Creapub brand background"
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-[0.15]"
+          className="scale-[1.03] object-cover blur-[5px]"
         />
       </div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white/95 via-white/90 to-white" />
 
-      <div className="container-padded relative grid min-h-[calc(100dvh-6rem)] items-center py-12 sm:min-h-[calc(100dvh-7rem)] sm:py-20">
-        <div className="max-w-4xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white/80 px-4 py-2 text-sm text-navy/70 shadow-sm">
-            <Sparkles className="h-4 w-4 text-brand" aria-hidden="true" />
-            {company.slogan}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white/30 via-white/25 to-white/55" />
+
+      <div className="container-padded flex min-h-[calc(100vh-6rem)] flex-col items-center justify-center pb-28 pt-16 md:pb-32">
+
+        {/* Hero Content */}
+        <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
+
+          {/* Badge */}
+          <div className="mb-8 inline-flex items-center justify-center gap-2 rounded-full border border-brand/15 bg-white/80 px-5 py-2 shadow-sm backdrop-blur">
+            <Sparkles className="h-4 w-4 text-brand" />
+
+            <span className="text-sm font-medium text-navy/70">
+              {company.slogan}
+            </span>
           </div>
-          <h1 className="font-display text-[2rem] font-semibold leading-[1.08] tracking-tight text-navy sm:text-4xl md:text-5xl lg:text-6xl">
-            Communication visuelle premium pour les marques qui doivent être vues.
+
+          {/* Title */}
+          <h1 className="max-w-5xl font-display text-4xl font-bold leading-tight tracking-tight text-navy sm:text-5xl lg:text-7xl">
+            Creapub
+            <br />
+            Vos Solutions Publicitaires Créatives
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-navy/65 sm:mt-7 sm:text-lg sm:leading-8 md:text-xl">
-            Creapub transforme restaurants, hôtels, usines, cliniques, espaces commerciaux, lancements immobiliers et événements en environnements de marque visibles et mémorables.
+
+          {/* Description */}
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-navy/65 sm:text-xl">
+            Creapub est né de l&apos;envie d&apos;aider les commerçants et
+            entrepreneurs à se démarquer dans un marché concurrentiel.
+            Nous croyons que la créativité et la visibilité vont main dans la
+            main.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <LinkButton href="#contact" aria-label="Demander un devis à Creapub">
+          {/* Highlight Cards */}
+          <div className="mt-14 grid w-full gap-6 md:grid-cols-3">
+            {highlights.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={item.title}
+                  className="flex flex-col items-center rounded-3xl border border-brand/10 bg-white/80 p-8 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
+                >
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand">
+                    <Icon className="h-7 w-7" />
+                  </div>
+
+                  <h3 className="text-lg font-semibold text-navy">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-7 text-navy/60">
+                    {item.detail}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* CTA */}
+          <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <LinkButton href="#contact">
               Demander un devis
             </LinkButton>
-            <LinkButton href="#portfolio" variant="secondary" aria-label="Voir le portfolio de Creapub">
+
+            <LinkButton href="#portfolio" variant="secondary">
               Voir les réalisations
             </LinkButton>
           </div>
-
-          <div className="mt-10 flex flex-wrap gap-2" aria-label="Marchés cibles">
-            {targetMarkets.map((market) => (
-              <span
-                key={market}
-                className="rounded-full border border-brand/12 bg-white/70 px-3 py-1.5 text-xs font-medium text-navy/60 shadow-sm"
-              >
-                {market}
-              </span>
-            ))}
-          </div>
         </div>
 
-        <div className="mt-14 grid gap-4 rounded-3xl border border-brand/10 bg-white/80 p-5 shadow-sm sm:grid-cols-2 md:gap-6 md:p-6 lg:grid-cols-3">
+        {/* Statistics */}
+        <div className="mt-20 grid w-full max-w-5xl gap-6 rounded-3xl border border-brand/10 bg-white/80 p-8 text-center shadow-lg md:grid-cols-3">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`border-brand/10 pb-4 last:pb-0 sm:pb-0 ${
-                index < stats.length - 1 ? "border-b lg:border-b-0 lg:border-r lg:last:border-r-0" : ""
-              }`}
+              className={`flex flex-col items-center justify-center ${index !== stats.length - 1
+                ? "border-b border-brand/10 pb-6 md:border-b-0 md:border-r md:pb-0"
+                : ""
+                }`}
             >
-              <p className="font-display text-3xl font-semibold text-navy md:text-4xl">
-                {stat.prefix}{stat.value}{stat.suffix}
+              <p className="font-display text-5xl font-bold text-brand">
+                {stat.prefix}
+                {stat.value}
+                {stat.suffix}
               </p>
-              <p className="mt-2 text-sm text-navy/60">
+
+              <p className="mt-3 text-base text-navy/60">
                 {stat.label}
               </p>
             </div>
@@ -79,12 +144,12 @@ export function Hero() {
         </div>
       </div>
 
+      {/* Scroll */}
       <a
         href="#services"
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-sm text-navy/45 transition hover:text-brand md:flex"
-        aria-label="Scroll to services"
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 items-center gap-2 rounded-full border border-brand/10 bg-white/70 px-5 py-2 text-sm text-navy/60 shadow-sm backdrop-blur transition hover:border-brand hover:text-brand md:flex"
       >
-        <ArrowDown className="h-4 w-4" aria-hidden="true" />
+        <ArrowDown className="h-4 w-4 animate-bounce" />
         Explorer
       </a>
     </section>

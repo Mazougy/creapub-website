@@ -1,14 +1,4 @@
-import {
-  BadgeCheck,
-  Box,
-  Cog,
-  Lightbulb,
-  PanelTop,
-  Printer,
-  Scissors,
-  Store,
-  Truck,
-} from "lucide-react";
+import { Box, Lightbulb, Printer } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { services } from "@/lib/content";
 
@@ -16,22 +6,16 @@ const icons = {
   Printer,
   Lightbulb,
   Box,
-  Scissors,
-  Cog,
-  Truck,
-  PanelTop,
-  Store,
-  BadgeCheck,
 };
 
 export function Services() {
   return (
-    <section id="services" className="py-24 md:py-32">
+    <section id="services" className="py-16 md:py-32">
       <div className="container-padded">
         <SectionHeader
-          eyebrow="Compétences"
-          title="Du concept à la présence de marque installée."
-          description="Un studio complet de communication visuelle pour campagnes, espaces commerciaux, sites industriels et signalétique à fort impact."
+          eyebrow="Notre service"
+          title="Découvrez notre service"
+          description="Chez Creapub, nous concevons et produisons des solutions publicitaires innovantes pour aider les entreprises à renforcer leur visibilité et à attirer plus de clients. Spécialisés dans la signalétique professionnelle, les affichages portables, les mascottes gonflables et les supports promotionnels personnalisés, nous offrons un service complet alliant créativité, qualité et impact visuel."
         />
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

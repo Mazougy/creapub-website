@@ -1,4 +1,3 @@
-import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
@@ -9,7 +8,6 @@ import { Portfolio } from "@/components/Portfolio";
 import { Process } from "@/components/Process";
 import { Products } from "@/components/Products";
 import { Services } from "@/components/Services";
-import { Testimonials } from "@/components/Testimonials";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 const structuredData = {
@@ -49,10 +47,8 @@ export default function Home() {
         <Services />
         <Products />
         <Process />
-        <About />
         <Founders />
         <Portfolio />
-        <Testimonials />
         <CTA />
         <Contact />
       </main>

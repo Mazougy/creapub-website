@@ -60,7 +60,7 @@ select {
 }
 
 .container-padded {
-  width: min(100% - 1.5rem, 1180px);
+  width: min(100% - 2rem, 1180px);
   margin-inline: auto;
 }
 

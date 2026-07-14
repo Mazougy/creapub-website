@@ -26,7 +26,7 @@ const icons = {
 
 export function Process() {
   return (
-    <section id="process" className="relative overflow-hidden py-24 md:py-32">
+    <section id="process" className="relative overflow-hidden py-16 md:py-32">
       <div className="absolute left-1/2 top-40 h-px w-[80vw] -translate-x-1/2 bg-brand-line opacity-70" aria-hidden="true" />
       <div className="container-padded">
         <SectionHeader

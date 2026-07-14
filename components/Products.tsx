@@ -1,12 +1,29 @@
+"use client";
+
 import Image from "next/image";
-import { BadgeCheck, Clock, MapPin, Maximize2, MessageCircle } from "lucide-react";
+import { useEffect, useState } from "react";
+import { BadgeCheck, Clock, MapPin, Maximize2, MessageCircle, X } from "lucide-react";
 import { LinkButton } from "@/components/ui/Buttons";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { company, products } from "@/lib/content";
 
 export function Products() {
+  const [selectedProduct, setSelectedProduct] = useState<(typeof products)[number] | null>(null);
+
+  useEffect(() => {
+    if (!selectedProduct) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelectedProduct(null);
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [selectedProduct]);
+
   return (
-    <section id="products" className="py-24 md:py-32">
+    <>
+      <section id="products" className="py-16 md:py-32">
       <div className="container-padded">
         <SectionHeader
           eyebrow="Produits"
@@ -14,13 +31,13 @@ export function Products() {
           description="Des fiches produits claires aident les équipes à comparer matériaux, délais et cas d'usage avant de demander un devis précis."
         />
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
           {products.map((product) => (
             <article
               key={product.name}
               className="group flex h-full flex-col overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand/25 hover:shadow-md"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-surface-blue">
+              <div className="group/image relative aspect-[5/4] overflow-hidden bg-surface-blue">
                 <Image
                   src={product.image}
                   alt={`${product.name} visual placeholder`}
@@ -29,14 +46,17 @@ export function Products() {
                   className="object-cover transition duration-500 hover:scale-105"
                   loading="lazy"
                 />
-                <span className="absolute left-4 top-4 rounded-full border border-brand/20 bg-white/90 px-3 py-1 text-xs font-semibold text-brand">
-                  {product.badge}
-                </span>
+                <button
+                  type="button"
+                  className="absolute inset-0 cursor-zoom-in bg-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white"
+                  aria-label={`Open a larger view of ${product.name}`}
+                  onClick={() => setSelectedProduct(product)}
+                />
               </div>
 
-              <div className="flex flex-1 flex-col p-5">
+              <div className="flex flex-1 flex-col p-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-navy">{product.name}</h3>
+                  <h3 className="text-2xl font-semibold text-navy">{product.name}</h3>
                   <p className="mt-3 text-sm leading-6 text-navy/55">{product.material}</p>
 
                   <dl className="mt-5 grid gap-3 text-sm text-navy/65">
@@ -89,6 +109,42 @@ export function Products() {
           ))}
         </div>
       </div>
-    </section>
+      </section>
+
+      {selectedProduct && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-navy/70 p-4 backdrop-blur-md sm:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${selectedProduct.name} enlarged image`}
+          onClick={() => setSelectedProduct(null)}
+        >
+          <div
+            className="relative w-full max-w-6xl overflow-hidden bg-transparent shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="absolute right-5 top-5 z-10 grid h-12 w-12 place-items-center rounded-full bg-brand text-white shadow-lg ring-2 ring-white/80 transition hover:bg-brand-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              aria-label="Close enlarged image"
+              onClick={() => setSelectedProduct(null)}
+            >
+              <X className="h-5 w-5" aria-hidden="true" />
+            </button>
+
+            <div className="relative h-[88vh] w-full overflow-hidden bg-transparent">
+              <Image
+                src={selectedProduct.image}
+                alt={`${selectedProduct.name} enlarged view`}
+                fill
+                sizes="(min-width: 1024px) 960px, 92vw"
+                className="object-cover"
+              />
+            </div>
+
+          </div>
+        </div>
+      )}
+    </>
   );
 }

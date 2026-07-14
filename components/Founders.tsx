@@ -5,12 +5,12 @@ import { founders } from "@/lib/content";
 
 export function Founders() {
   return (
-    <section id="founders" className="py-24 md:py-32">
+    <section id="founders" className="py-16 md:py-32">
       <div className="container-padded">
         <SectionHeader
           eyebrow="Fondateurs"
-          title="Stratégie et production, alignées dès le premier jour."
-          description="Creapub est dirigé par des fondateurs complémentaires qui relient la clarté de la marque à l'exécution technique."
+          title="Les Fondateurs de Creapub"
+          description="Découvrez les fondateurs de Creapub, chacun apportant son expertise unique pour faire grandir le projet et offrir les meilleures solutions publicitaires aux entreprises."
         />
 
         <div className="grid gap-5 md:grid-cols-2">

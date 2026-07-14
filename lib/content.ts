@@ -5,7 +5,7 @@ export const company = {
   // Form submissions will be sent to this address by default
   email: "marzouguiadam82@gmail.com",
   phone: "+216 55 000 000",
-  whatsapp: "https://wa.me/21655000000",
+  whatsapp: "https://wa.me/21214420",
   address: "Studio de production visuelle desservant l'Afrique et le Golfe",
   hours: "Lundi au samedi, 8h30 - 18h30",
   // Optional coordinates for map embedding. Set to non-zero values to enable map.
@@ -41,42 +41,6 @@ export const services = [
     title: "Lettres 3D",
     description:
       "Logos et lettrages dimensionnels en acrylique, acier inoxydable, aluminium, PVC et matériaux composites.",
-  },
-  {
-    icon: "Scissors",
-    title: "Découpe laser",
-    description:
-      "Découpe et gravure de précision pour habillages de marque, panneaux décoratifs, étiquettes et détails de fabrication sur mesure.",
-  },
-  {
-    icon: "Cog",
-    title: "Production CNC",
-    description:
-      "Usinage industriel pour signalétique, éléments muraux, agencements de vente, gabarits et pièces sur mesure de grande taille.",
-  },
-  {
-    icon: "Truck",
-    title: "Covering véhicule",
-    description:
-      "Coverings complets ou partiels et décalcomanies durables transformant les véhicules en supports de marque mobiles.",
-  },
-  {
-    icon: "PanelTop",
-    title: "Branding intérieur",
-    description:
-      "Murs de réception, signalétique intérieure, films sur verre, fresques et environnements brandés pour une expérience client soignée.",
-  },
-  {
-    icon: "Store",
-    title: "Conception de façade",
-    description:
-      "Systèmes complets de façades visuelles alignant matériaux, éclairage, échelle et installation pour un résultat soigné.",
-  },
-  {
-    icon: "BadgeCheck",
-    title: "Essentiels business",
-    description:
-      "Roll ups, cartes de visite, signalétique directionnelle et fabrications personnalisées produits au même standard premium.",
   },
 ];
 
@@ -146,13 +110,13 @@ export const founders = [
   {
     name: "Yassine Marzougui",
     role: "Marketing et stratégie de marque",
-    image: "/images/founder-yassine.svg",
+    image: "/images/founder-yassine.jpg",
     bio: "Yassine transforme des objectifs commerciaux en systèmes visuels que les clients remarquent, comprennent et mémorisent. Il se concentre sur le positionnement, la clarté des campagnes et la cohérence de la marque à chaque point de contact.",
   },
   {
     name: "Nader Atig",
     role: "Production et excellence technique",
-    image: "/images/founder-nader.svg",
+    image: "/images/founder-nader.jpg",
     bio: "Nader dirige la production avec l'œil d'un artisan pour les tolérances, les matériaux, l'éclairage et la qualité d'installation. Son travail transforme des concepts ambitieux en résultats durables, précis et prêts pour le site.",
   },
 ];
