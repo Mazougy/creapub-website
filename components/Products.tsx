@@ -92,7 +92,7 @@ export function Products() {
                 </div>
 
                 <div className="mt-auto grid gap-4 pt-3">
-                  <LinkButton href="#contact" className="w-full py-3" aria-label={`Request quote for ${product.name}`}>
+                  <LinkButton href="#contact-form" className="w-full py-3" aria-label={`Request quote for ${product.name}`}>
                     Demander un devis
                   </LinkButton>
                   <a

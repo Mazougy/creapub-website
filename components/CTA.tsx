@@ -21,7 +21,7 @@ export function CTA() {
                 <LinkButton href={company.whatsapp} icon="whatsapp" aria-label="Contacter Creapub sur WhatsApp">
                   WhatsApp
                 </LinkButton>
-                <LinkButton href="#contact" variant="secondary" aria-label="Demander un devis Creapub">
+                <LinkButton href="#contact-form" variant="secondary" aria-label="Demander un devis Creapub">
                   Devis
                 </LinkButton>
                 <a

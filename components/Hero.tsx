@@ -110,7 +110,7 @@ export function Hero() {
 
           {/* CTA */}
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <LinkButton href="#contact">
+            <LinkButton href="#contact-form">
               Demander un devis
             </LinkButton>
 
