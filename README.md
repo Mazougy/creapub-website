@@ -2,7 +2,6 @@
 
 ### Là où vos idées deviennent visibles.
 
-[![Live Website](https://img.shields.io/badge/Live%20Website-creapub.vercel.app-4F6DFF?style=for-the-badge&logo=vercel&logoColor=white)](https://creapub.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
