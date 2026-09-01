@@ -1,45 +1,59 @@
-# ✦ Creapub
+# Creapub | Premium Visual Communication
 
 ### Là où vos idées deviennent visibles.
 
-> A premium digital experience for **Creapub**, a Tunisian visual communication company specializing in signage, printing, branding, fabrication, and custom advertising solutions.
-
+[![Live Website](https://img.shields.io/badge/Live%20Website-creapub.vercel.app-4F6DFF?style=for-the-badge&logo=vercel&logoColor=white)](https://creapub.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
-[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animation-black?style=for-the-badge&logo=framer)](https://motion.dev/)
+[![Vercel](https://img.shields.io/badge/Deployed_with-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/)
 
 ---
 
-## Overview
+## 🌐 Site
 
-Creapub is a modern visual communication company founded in **2025**, helping businesses become more visible, recognizable, and memorable through physical and digital branding.
+### https://creapub.vercel.app/
 
-This website was designed as a **premium brand experience**, not simply a company presentation page.
-
-The experience focuses on:
-
-- Strong visual identity
-- Clear service presentation
-- Premium product showcases
-- High-converting calls to action
-- Mobile-first design
-- Smooth interactions and animations
-- Direct WhatsApp communication
-- SEO-friendly structure
-
-The goal is simple:
-
-> **Turn attention into visibility, and visibility into business.**
+A premium landing page for **Creapub**, a visual communication company in Tunisia, specialized in printing, signage, branding, fabrication and custom advertising solutions.
 
 ---
 
-## ✦ What is Creapub?
+## Project Overview
 
-Creapub provides visual communication and fabrication solutions for businesses across multiple industries.
+Creapub was founded back in **2025** with a simple belief:
+**Businesses ought to be found.**
 
-### Services
+The website was designed to be more than a traditional corporate site. It is a full digital brand experience designed to communicate:
+- Imaginative
+- Being professional
+- Technical proficiency
+- Quality of production
+- Confidence in oneself
+- Visibility of business
+
+A visual communication and fabrication company, the experience combines a modern UI/UX with a strong visual identity.
+
+---
+
+## 🎯 Goals of Project
+
+The website was developed to:
+
+-Establish Creapub as a premium visual communication company
+- Explain products and services in a way that can be understood
+- Display representative and completed projects
+- Build rapport with potential clients
+- Draft requests for quotations
+- Enable direct communication through WhatsApp
+- Deliver a robust mobile experience
+- Lay the groundwork for future business and SEO growth
+
+---
+
+## 🧩 Services Presented
+
+The website showcases Creapub's main visual communication and fabrication services:
 
 - Large Format Printing
 - LED Signs
@@ -61,9 +75,9 @@ Creapub provides visual communication and fabrication solutions for businesses a
 
 ---
 
-## 🎯 Target Industries
+## 🏭 Industries
 
-The platform is designed around the needs of:
+The experience is designed around businesses such as:
 
 - Restaurants & Cafés
 - Pharmacies
@@ -77,87 +91,54 @@ The platform is designed around the needs of:
 
 ---
 
-## 🧠 Design Philosophy
+# ✨ Features
 
-The visual direction combines:
+### Premium Hero Section
 
-**Modern Swiss design × Premium branding × Industrial craftsmanship**
+With a great first impression:
 
-The interface uses:
+- Creapub brand statement
+- Services highlighted
+- Statistics
+- Calls to actions
+- Indicators of target audience
 
-- Strong typography
-- Generous whitespace
-- Structured layouts
-- Soft surfaces
-- Premium blue and cream tones
-- High-contrast CTAs
-- Subtle motion
-- Responsive interactions
+### Services Section
 
-Every section is designed to support one objective:
+Organized service cards with icons, descriptions, and hierarchy of visuals.
 
-### Make Creapub look trustworthy before the first conversation starts.
+### Products Section
 
----
+Well-structured presentation of products that include:
 
-## ⚙️ Tech Stack
+- Name of the product
+- Material used
+- Product use
+- Dimensions
+- Production details
+- Availability
+- Starting price
+- CTAs for quotes
 
-### Frontend
+### Production Process
 
-- **Next.js 15**
-- **React**
-- **TypeScript**
-- **Tailwind CSS**
-- **Framer Motion**
-- **Lucide React**
-
-### Deployment
-
-- **Vercel**
-- **GitHub**
-
-### Communication
-
-- WhatsApp
-- Email
-- Phone
-
----
-
-## 🏗️ Architecture
-
-The project follows a modular component-based architecture.
+A visual step-by-step journey:
 
 ```text
-creapub/
-│
-├── app/
-│   ├── api/
-│   ├── layout.tsx
-│   ├── page.tsx
-│   ├── robots.ts
-│   └── sitemap.ts
-│
-├── components/
-│   ├── About.tsx
-│   ├── CTA.tsx
-│   ├── Contact.tsx
-│   ├── Founders.tsx
-│   ├── Footer.tsx
-│   ├── Hero.tsx
-│   ├── Navbar.tsx
-│   ├── Portfolio.tsx
-│   ├── Process.tsx
-│   ├── Products.tsx
-│   ├── Services.tsx
-│   ├── Testimonials.tsx
-│   └── ui/
-│
-├── lib/
-│   └── content.ts
-│
-├── public/
-│   └── images/
-│
-└── styles/
-    └── globals.css
+Client Consultation
+        ↓
+Site Visit & Measurement
+        ↓
+Concept Design
+        ↓
+Client Validation
+        ↓
+Production
+        ↓
+Assembly & Fabrication
+        ↓
+Quality Control
+        ↓
+Installation
+        ↓
+Final Delivery
