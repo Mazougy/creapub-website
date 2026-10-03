@@ -68,6 +68,17 @@ select {
   animation: portfolio-image-fade 2100ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+.portfolio-project-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 640px) {
+  .portfolio-project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-portfolio-fade {
     animation-duration: 1ms;

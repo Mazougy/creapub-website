@@ -109,11 +109,11 @@ export function Portfolio() {
           </div>
         </div>
 
-        <div className="columns-1 gap-5 lg:columns-2 xl:columns-3">
+        <div className="portfolio-project-grid items-start gap-5">
           {visibleItems.map((item, index) => (
             <article
               key={item.title}
-              className="group mb-5 break-inside-avoid overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand/25 hover:shadow-xl"
+              className="group overflow-hidden rounded-3xl border border-brand/12 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand/25 hover:shadow-xl"
             >
               <ProjectGallery images={item.images} title={item.title} order={index} />
               <div className="p-6">
