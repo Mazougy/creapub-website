@@ -10,7 +10,11 @@ const icons = {
 
 export function Services() {
   return (
-    <section id="services" className="py-16 md:py-32">
+    <section
+      id="services"
+      className="bg-gradient-to-b from-[#b8b3dc] via-[#e4e8f9] to-surface-blue py-16 md:py-32"
+      style={{ background: "linear-gradient(180deg, #aaa7d4 0%, #d9dcf1 32%, #eef3ff 72%, #eef3ff 100%)" }}
+    >
       <div className="container-padded">
         <SectionHeader
           eyebrow="Notre service"

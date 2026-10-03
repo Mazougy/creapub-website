@@ -26,6 +26,32 @@ export function Contact() {
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form)) as Record<string, string>;
 
+    const firstName = data.firstName.trim();
+    const phone = data.phone.replace(/[\s()-]/g, "");
+    const tunisianMobile = /^[9532]\d{7}$/;
+    const details = data.message.trim();
+    if (firstName.length < 4) {
+      const field = form.elements.namedItem("firstName") as HTMLInputElement;
+      field.setCustomValidity("Le prénom doit contenir au moins 4 caractères.");
+      field.reportValidity();
+      field.setCustomValidity("");
+      return;
+    }
+    if (!tunisianMobile.test(phone)) {
+      const field = form.elements.namedItem("phone") as HTMLInputElement;
+      field.setCustomValidity("Entrez un numéro mobile de 8 chiffres commençant par 9, 5, 2 ou 3.");
+      field.reportValidity();
+      field.setCustomValidity("");
+      return;
+    }
+    if (details.length < 26) {
+      const field = form.elements.namedItem("message") as HTMLTextAreaElement;
+      field.setCustomValidity("Les détails du projet doivent contenir au moins 26 caractères.");
+      field.reportValidity();
+      field.setCustomValidity("");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -134,7 +160,6 @@ export function Contact() {
               className="rounded-3xl border border-brand/12 bg-white p-4 shadow-soft sm:p-6 md:p-8"
               aria-label="Formulaire de contact"
               onSubmit={handleSubmit}
-              noValidate
             >
               <fieldset disabled={isSubmitting} className="grid gap-4 sm:gap-5 disabled:opacity-70">
                 <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
@@ -147,7 +172,7 @@ export function Contact() {
                     className={`${inputClass} min-h-14`}
                       placeholder="Votre prénom"
                       required
-                      minLength={2}
+                      minLength={4}
                     />
                   </label>
                   <label className="grid gap-2 text-sm font-medium text-navy/75">
@@ -171,6 +196,8 @@ export function Contact() {
                       className={`${inputClass} min-h-14`}
                       placeholder="vous@entreprise.com"
                       required
+                      pattern="[^@\s]+@[^@.\s]{3,}\.[^.\s]{2,}"
+                      title="Utilisez le format nom@entreprise.com, avec au moins 3 caractères après @ et 2 après le point."
                     />
                   </label>
                   <label className="grid gap-2 text-sm font-medium text-navy/75">
@@ -182,8 +209,7 @@ export function Contact() {
                       className={`${inputClass} min-h-14`}
                       placeholder="+216 ..."
                       required
-                      pattern="^[0-9+\s()-]{6,}$"
-                      title="Veuillez entrer un numéro de téléphone valide"
+                      title="Numéro mobile de 8 chiffres commençant par 9, 5, 2 ou 3"
                     />
                   </label>
                 </div>
@@ -196,7 +222,7 @@ export function Contact() {
                     className="min-h-40 resize-y rounded-2xl border border-brand/15 bg-white px-4 py-3 text-base text-navy outline-none transition placeholder:text-navy/30 focus:border-brand focus:ring-4 focus:ring-brand/10 disabled:cursor-not-allowed disabled:bg-surface-blue/60 disabled:text-navy/40"
                     placeholder="Parlez-nous de l'emplacement, du calendrier, des tailles, matériaux ou objectif de visibilité."
                     required
-                    minLength={10}
+                    minLength={26}
                   />
                 </label>
 

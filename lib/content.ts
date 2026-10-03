@@ -110,40 +110,42 @@ export const founders = [
 
 export const portfolioItems = [
   {
-    title: "Façade pour restaurant gastronomique",
-    category: "Restaurants",
-    image: "/images/portfolio-restaurant.svg",
-    result: "Lettres boîtiers illuminées et habillages vitrine pour une présence nocturne premium.",
+    title: "Logo lumineuse",
+    category: "Logo lumineuse",
+    images: [
+      "/images/741509892_1352803990388874_6116789817106238062_n.jpg",
+      "/images/742831766_897188702820906_6615049110919589608_n.jpg",
+    ],
+    result: "Logos lumineux personnalisés pour renforcer la visibilité et l'identité de chaque établissement.",
   },
   {
-    title: "Ensemble signalétique pour clinique",
-    category: "Cliniques",
-    image: "/images/portfolio-clinic.svg",
-    result: "Signalétique claire, films d'intimité et panneaux de réception conçus pour la confiance et la fluidité.",
+    title: "Enseigne trottoir",
+    category: "Enseigne trottoir",
+    images: [
+      "/images/744042136_1792052701975157_1298901112092965779_n.jpg",
+      "/images/742606035_1401569558506713_1242486507703610943_n.jpg",
+      "/images/743072371_1524656375810010_3409340553795536888_n.jpg",
+      "/images/743373469_2529296524190344_6037315232871245433_n.jpg",
+      "/images/744074525_1029473120046200_7293343440310801184_n.jpg",
+      "/images/740835951_1701749397787576_1005780700428899517_n.jpg",
+    ],
+    result: "Chevalets double face conçus pour capter l'attention des passants et présenter clairement les offres.",
   },
   {
-    title: "Programme sécurité et identité usine",
-    category: "Usines",
-    image: "/images/portfolio-factory.svg",
-    result: "Signalétique de sécurité grand format, marquage de zones et panneaux d'identité extérieurs.",
+    title: "Miroir Instagram",
+    category: "Miroir Instagram",
+    images: [
+      "/images/746041070_1398100195540612_6456938072903520230_n.jpg",
+      "/images/746268749_1718885025807584_1855466551451650699_n.jpg",
+      "/images/742530820_1805876907489478_2254652386954293305_n.jpg",
+    ],
+    result: "Miroirs photo personnalisés avec éclairage et détails de marque pour créer des moments à partager.",
   },
   {
-    title: "Mur d'identité pour hall d'hôtel",
-    category: "Hôtels",
-    image: "/images/portfolio-hotel.svg",
-    result: "Logotype en métal et acrylique en couches avec éclairage chaud subtil à l'arrivée des clients.",
-  },
-  {
-    title: "Campagne de lancement retail",
-    category: "Commerce de détail",
-    image: "/images/portfolio-retail.svg",
-    result: "Campagne vitrine, signalétique intérieure par catégorie et roll-ups de lancement.",
-  },
-  {
-    title: "Centre de vente immobilier",
-    category: "Immobilier",
-    image: "/images/portfolio-realestate.svg",
-    result: "Panneaux premium, plans de projet, signalétique d'espaces maquette et supports de présentation.",
+    title: "Façade Alucobond",
+    category: "Façade Alucobond",
+    images: ["/images/740507471_1311904184013503_6080618705323488467_n.jpg"],
+    result: "Façade de boutique avec enseigne découpée et finitions soignées pour une identité visible depuis la rue.",
   },
 ];
 
