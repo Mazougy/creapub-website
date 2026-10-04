@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { portfolioItems } from "@/lib/content";
 
@@ -10,12 +10,24 @@ const filters = ["Tous", "Logo lumineuse", "Enseigne trottoir", "Miroir Instagra
 const ALL_FILTER = "Tous";
 
 function ProjectGallery({ images, title, order }: { images: string[]; title: string; order: number }) {
-  const [activeImage, setActiveImage] = useState(0);
+  const [slide, setSlide] = useState({ active: 0, previous: null as number | null, revision: 0 });
+  const [loadedRevision, setLoadedRevision] = useState(0);
   const intervalRef = useRef<number | undefined>(undefined);
+
+  const move = useCallback((direction: number) => {
+    setSlide((current) => {
+      const next = (current.active + direction + images.length) % images.length;
+      return {
+        active: next,
+        previous: current.active,
+        revision: current.revision + 1,
+      };
+    });
+  }, [images.length]);
 
   useEffect(() => {
     if (images.length < 2) return;
-    const advance = () => setActiveImage((current) => (current + 1) % images.length);
+    const advance = () => move(1);
     const firstSlide = window.setTimeout(() => {
       advance();
       const timer = window.setInterval(advance, 9000);
@@ -26,21 +38,39 @@ function ProjectGallery({ images, title, order }: { images: string[]; title: str
       if (intervalRef.current !== undefined) window.clearInterval(intervalRef.current);
       intervalRef.current = undefined;
     };
-  }, [images.length, order]);
+  }, [images.length, order, move]);
 
-  const move = (direction: number) => {
-    setActiveImage((current) => (current + direction + images.length) % images.length);
-  };
+  useEffect(() => {
+    if (slide.previous === null || loadedRevision !== slide.revision) return;
+    const revision = slide.revision;
+    const timer = window.setTimeout(() => {
+      setSlide((current) => current.revision === revision ? { ...current, previous: null } : current);
+    }, 1800);
+    return () => window.clearTimeout(timer);
+  }, [slide.previous, slide.revision, loadedRevision]);
 
   return (
     <div className="project-image relative aspect-[4/5] overflow-hidden bg-navy">
+      {slide.previous !== null && (
+        <Image
+          key={`previous-${slide.revision}`}
+          src={images[slide.previous]}
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          className="pointer-events-none absolute inset-0 z-10 object-cover"
+          loading="eager"
+        />
+      )}
       <Image
-        key={images[activeImage]}
-        src={images[activeImage]}
-        alt={`${title} — photo ${activeImage + 1} sur ${images.length}`}
+        key={images[slide.active]}
+        src={images[slide.active]}
+        alt={`${title} — photo ${slide.active + 1} sur ${images.length}`}
         fill
         sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-        className="animate-portfolio-fade object-cover transition duration-500 group-hover:scale-105"
+        onLoad={() => setLoadedRevision(slide.revision)}
+        className={`absolute inset-0 z-20 object-cover transition-opacity duration-[1800ms] ease-in-out motion-reduce:duration-0 ${loadedRevision === slide.revision ? "opacity-100" : "opacity-0"}`}
         loading="lazy"
       />
       {images.length > 1 && (
@@ -49,7 +79,7 @@ function ProjectGallery({ images, title, order }: { images: string[]; title: str
             type="button"
             onClick={() => move(-1)}
             aria-label={`Photo précédente — ${title}`}
-            className="absolute left-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-navy shadow transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="absolute left-3 top-1/2 z-30 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-navy shadow transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             <ArrowLeft className="h-5 w-5" aria-hidden="true" />
           </button>
@@ -57,12 +87,12 @@ function ProjectGallery({ images, title, order }: { images: string[]; title: str
             type="button"
             onClick={() => move(1)}
             aria-label={`Photo suivante — ${title}`}
-            className="absolute right-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-navy shadow transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="absolute right-3 top-1/2 z-30 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-navy shadow transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             <ArrowRight className="h-5 w-5" aria-hidden="true" />
           </button>
-          <span className="absolute bottom-3 right-3 rounded-full bg-navy/75 px-2.5 py-1 text-xs font-semibold text-white" aria-live="polite">
-            {activeImage + 1} / {images.length}
+          <span className="absolute bottom-3 right-3 z-30 rounded-full bg-navy/75 px-2.5 py-1 text-xs font-semibold text-white" aria-live="polite">
+            {slide.active + 1} / {images.length}
           </span>
         </>
       )}
