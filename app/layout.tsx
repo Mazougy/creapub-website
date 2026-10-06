@@ -17,13 +17,13 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.creapub.com"),
+  metadataBase: new URL("https://creapub.vercel.app"),
   title: {
     default: "Creapub | Premium Visual Communication",
     template: "%s | Creapub",
   },
   description:
-    "Creapub creates premium visual communication, LED signs, 3D letters, large format printing, CNC, laser cutting, vehicle branding, and commercial signage.",
+    "Découvrez les réalisations Creapub : enseignes lumineuses, impression, signalétique et fabrication sur mesure.",
   keywords: [
     "Creapub",
     "visual communication",
@@ -38,27 +38,28 @@ export const metadata: Metadata = {
   creator: "Creapub",
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://www.creapub.com",
+    locale: "fr_FR",
+    url: "https://creapub.vercel.app",
     siteName: "Creapub",
-    title: "Creapub | Premium Visual Communication",
+    title: "Creapub | Enseignes et communication visuelle",
     description:
-      "Where ideas become visible through premium signage, printing, fabrication, and branded environments.",
+      "Enseignes lumineuses, impression, signalétique et projets de communication visuelle réalisés par Creapub.",
     images: [
       {
-        url: "/images/og-creapub.svg",
+        url: "https://creapub.vercel.app/images/og-creapub.png",
         width: 1200,
         height: 630,
-        alt: "Creapub premium visual communication",
+        type: "image/png",
+        alt: "Creapub — enseignes et communication visuelle",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Creapub | Premium Visual Communication",
+    title: "Creapub | Enseignes et communication visuelle",
     description:
-      "Premium visual communication for restaurants, hotels, factories, retail, real estate, clinics, and events.",
-    images: ["/images/og-creapub.svg"],
+      "Enseignes lumineuses, impression, signalétique et projets de communication visuelle réalisés par Creapub.",
+    images: ["https://creapub.vercel.app/images/og-creapub.png"],
   },
   robots: {
     index: true,
